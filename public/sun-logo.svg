@@ -1,0 +1,43 @@
+<svg 
+  width="512" 
+  height="512" 
+  viewBox="0 0 120 120" 
+  fill="none" 
+  xmlns="http://www.w3.org/2000/svg"
+>
+  {/* Round Emblem Base */}
+  <circle cx="60" cy="60" r="54" fill="#0A1424" />
+  <circle cx="60" cy="60" r="50" stroke="#FFFFFF" strokeWidth="2.5" strokeDasharray="4 4" opacity="0.2" />
+  <circle cx="60" cy="60" r="46" stroke="#8DC63F" strokeWidth="0.75" opacity="0.3" />
+
+  {/* ENLARGED SUN */}
+  <circle cx="47" cy="43" r="18" fill="#FDB813" />
+  <g stroke="#FDB813" strokeWidth="2.5" strokeLinecap="round">
+    <line x1="47" y1="19" x2="47" y2="12" />
+    <line x1="47" y1="67" x2="47" y2="74" />
+    <line x1="23" x2="16" y1="43" y2="43" />
+    <line x1="71" x2="78" y1="43" y2="43" />
+    <line x1="30" y1="26" x2="25" y2="21" />
+    <line x1="64" y1="60" x2="69" y2="65" />
+    <line x1="30" y1="60" x2="25" y2="65" />
+    <line x1="64" y1="26" x2="69" y2="21" />
+  </g>
+
+  {/* SOLAR PANEL GRID */}
+  <g transform="rotate(-15 60 60)">
+    <path d="M33 52 L87 52 L95 80 L25 80 Z" fill="#0B2240" stroke="#FFFFFF" strokeWidth="1" />
+    <g stroke="#FFFFFF" strokeWidth="1.2" opacity="0.95">
+      <line x1="46" y1="52" x2="42" y2="80" />
+      <line x1="60" y1="52" x2="60" y2="80" />
+      <line x1="74" y1="52" x2="78" y2="80" />
+      <line x1="31" y1="61" x2="89" y2="61" />
+      <line x1="28" y1="71" x2="92" y2="71" />
+    </g>
+  </g>
+
+  {/* DUAL SWEEPING GREEN LEAVES */}
+  <path d="M19 80 C19 60, 38 46, 63 52 C49 69, 35 91, 19 80 Z" fill="#1A532E" />
+  <path d="M19 80 C27 71, 47 60, 63 52" stroke="#8DC63F" strokeWidth="1.5" strokeLinecap="round" />
+  <path d="M33 91 C41 77, 60 69, 80 75 C66 86, 52 102, 33 91 Z" fill="#8DC63F" />
+  <path d="M33 91 C41 85, 58 80, 80 75" stroke="#FFFFFF" strokeWidth="1" opacity="0.6" />
+</svg>
