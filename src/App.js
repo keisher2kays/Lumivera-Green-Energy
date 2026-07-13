@@ -1,24 +1,43 @@
-import logo from './logo.svg';
+
+
+// src/App.js
+import React from 'react';
 import './App.css';
+
+import Navbar from './components/Navbar';
+import Hero from './components/Hero';
+import AboutUs from './components/AboutUs';
+import Services from './components/Services';
+import OurProducts from './components/OurProducts';
+import Packages from './components/Packages';
+import OurTeam from './components/OurTeam';
+import TestimonialsPage from './components/Testimonials';
+import ContactView from './components/ContactView';
+import FooterMarquee from './components/FooterMarquee';
+import CartDrawer from './components/CartDrawer';
+import { CartProvider } from './components/CartContext';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <CartProvider>
+      <div className="app-wrapper">
+        <Navbar />
+
+        <main className="main-content-flow">
+          <section id="home"><Hero /></section>
+          <section id="about"><AboutUs /></section>
+          <section id="services"><Services /></section>
+          <section id="products"><OurProducts /></section>
+          <section id="packages"><Packages /></section>
+           <section id="team"><OurTeam /></section>
+          <section id="TestimonialsPage"><TestimonialsPage /></section>
+          <section id="contact"><ContactView /></section>
+        </main>
+
+        <FooterMarquee />
+        <CartDrawer />
+      </div>
+    </CartProvider>
   );
 }
 
