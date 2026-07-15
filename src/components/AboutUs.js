@@ -10,7 +10,7 @@ const AboutUs = () => {
     if (el) el.scrollIntoView({ behavior: 'smooth' });
   };
   // Split our shorter headline into individual words to animate safely
-  const headlineText = "Scalable solar engineered for global energy demands.";
+  const headlineText = "Accelerating the transition to clean, sustainable energy.";
   const words = headlineText.split(" ");
 
   return (
@@ -44,10 +44,18 @@ const AboutUs = () => {
           
           <div className="about-text-columns animate-slide-blur delay-3">
             <p className="about-col-para">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate.
+               LumiVera Green Energy is a forward-looking renewable energy company
+              established and registered in the Republic of Zimbabwe and the United
+              Kingdom. Founded with a clear vision of accelerating the transition to
+              clean, sustainable, and affordable energy, we contribute to economic
+              growth, environmental protection, and improved quality of life.
             </p>
             <p className="about-col-para">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integrity checked and precision certified. We combine clean innovation, reliable engineering, and eco-friendly deployment architectures to support sustainable standalone energy projects worldwide.
+              Driven by innovation, sustainability, and excellence, we develop and
+              deliver environmentally responsible energy solutions for residential,
+              commercial, industrial, agricultural, and public sector clients —
+              aiming to become one of Africa's leading renewable energy providers
+              while maintaining a strong international presence.
             </p>
             <button className="explore-inline-btn" onClick={scrollToProducts}>
   <div className="explore-icon-circle">↓</div> Explore More

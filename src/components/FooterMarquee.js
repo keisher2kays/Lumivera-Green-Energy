@@ -84,9 +84,9 @@ const FooterMarquee = () => {
             </div>
             
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Clean, reliable
-              solar power for homes and businesses across Zimbabwe — funded with ease
-              by loved ones abroad.
+             A forward-looking renewable energy company delivering sustainable, affordable
+    solar solutions for homes, businesses, and communities across Zimbabwe, the
+    UK, and beyond.
             </p>
           </div>
 

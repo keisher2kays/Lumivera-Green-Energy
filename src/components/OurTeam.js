@@ -13,18 +13,18 @@ const team = [
     role: 'Chief Executive Officer',
     bio: 'Leads overall strategy and partnerships across both markets, ensuring every project meets LumiVera\'s engineering and service standards.',
   },
-  {
-    image: liberty,
-    name: 'Liberty Chizemo',
-    role: 'Director',
-    bio: 'Oversees operations and client delivery, working closely with field teams to keep every installation on schedule and to spec.',
-  },
-  {
-    image: moyo,
-    name: 'Elizabeth Moyo',
-    role: 'Chief Executive Officer',
-    bio: 'Guides company direction and diaspora client relationships, bringing years of leadership experience to every engagement.',
-  },
+ {
+  image: liberty,
+  name: 'Liberty Chizemo',
+  role: 'Director & Shareholder',
+  bio: 'Provides strategic leadership and supports the company\'s growth through sound governance, business development, and a commitment to advancing sustainable energy solutions.',
+},
+ {
+  image: moyo,
+  name: 'Elizabeth Moyo',
+  role: 'Director & Shareholder',
+  bio: 'Plays a key role in corporate leadership, business operations, stakeholder engagement, and the promotion of innovative renewable energy initiatives that align with the company\'s vision.',
+},
   {
     image: ali,
     name: 'Mohammad Bolhasani',

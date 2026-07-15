@@ -59,7 +59,7 @@ const ContactView = () => {
 
           {/* LEFT: CONTACT INFO */}
           <div className="contact-info-column animate-slide-blur delay-1">
-            <div className="contact-info-block" style={{ borderTop: '4px solid #1E6B38' }}>
+            {/* <div className="contact-info-block" style={{ borderTop: '4px solid #1E6B38' }}>
               <Phone size={28} color="#1E6B38" strokeWidth={2} />
               <h4>Direct Line &amp; WhatsApp</h4>
               <p className="contact-info-value">+44 7909 787374</p>
@@ -67,9 +67,9 @@ const ContactView = () => {
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Connect instantly
                 with our diaspora accounts desk.
               </p>
-            </div>
+            </div> */}
 
-            <div className="contact-info-block" style={{ borderTop: '4px solid #0B2240' }}>
+            {/* <div className="contact-info-block" style={{ borderTop: '4px solid #0B2240' }}>
               <Mail size={28} color="#0B2240" strokeWidth={2} />
               <h4>Corporate Email</h4>
               <p className="contact-info-value">info@lumiveragreenenergy.com</p>
@@ -77,9 +77,28 @@ const ContactView = () => {
                 Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Submit
                 your load charts and architectural plans directly.
               </p>
-            </div>
+            </div> */}
+            <div className="contact-info-block" style={{ borderTop: '4px solid #1E6B38' }}>
+  <Phone size={28} color="#1E6B38" strokeWidth={2} />
+  <h4>Direct Line &amp; WhatsApp</h4>
+  <p className="contact-info-value">+44 7909 787374</p>
+  <p className="contact-info-copy">
+    Reach our accounts desk directly for enquiries, quotes, or support —
+    whether you're in Zimbabwe or abroad.
+  </p>
+</div>
 
-            <div className="pipeline-banner">
+<div className="contact-info-block" style={{ borderTop: '4px solid #0B2240' }}>
+  <Mail size={28} color="#0B2240" strokeWidth={2} />
+  <h4>Corporate Email</h4>
+  <p className="contact-info-value">info@lumiveragreenenergy.com</p>
+  <p className="contact-info-copy">
+    Send project details, load requirements, or documentation directly to
+    our team for a professional assessment.
+  </p>
+</div>
+
+            {/* <div className="pipeline-banner">
               <Globe2 size={26} color="#DDF23D" />
               <h4>From the UK to Zimbabwe</h4>
               <p className="pipeline-quote">&ldquo;We light up your future.&rdquo;</p>
@@ -87,7 +106,17 @@ const ContactView = () => {
                 Pay comfortably from wherever you are — we handle sourcing, delivery,
                 and installation back home.
               </p>
-            </div>
+            </div> */}
+
+            <div className="pipeline-banner">
+  <Globe2 size={26} color="#DDF23D" />
+  <h4>From the UK to Zimbabwe</h4>
+  <p className="pipeline-quote">&ldquo;Powering Tomorrow Sustainably.&rdquo;</p>
+  <p className="pipeline-copy">
+    With operations established in Zimbabwe and the United Kingdom, we're
+    positioned to serve clients with professionalism, innovation, and excellence.
+  </p>
+</div>
           </div>
 
           {/* RIGHT: ORDER / ENQUIRY FORM */}

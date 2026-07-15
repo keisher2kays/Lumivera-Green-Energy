@@ -7,6 +7,7 @@ import './App.css';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import AboutUs from './components/AboutUs';
+import VisionMission from './components/VisionMission';
 import Services from './components/Services';
 import OurProducts from './components/OurProducts';
 import Packages from './components/Packages';
@@ -26,6 +27,7 @@ function App() {
         <main className="main-content-flow">
           <section id="home"><Hero /></section>
           <section id="about"><AboutUs /></section>
+          <section id='vision'><VisionMission/></section>
           <section id="services"><Services /></section>
           <section id="products"><OurProducts /></section>
           <section id="packages"><Packages /></section>

@@ -1779,3 +1779,159 @@ body {
   max-width: 100%;
   height: auto;
 }
+
+
+/* ==========================================================================
+   VISION & MISSION
+   ========================================================================== */
+
+.vision-viewport {
+  background-color: var(--pure-white);
+  color: #061121;
+  padding: 6rem 7% 7rem 7%;
+  border-top: 1px solid #F1F5F9;
+}
+
+.vision-layout-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 3.5rem;
+}
+
+.vision-tagged-row {
+  display: grid;
+  grid-template-columns: 0.3fr 1.7fr;
+  gap: 2rem;
+  width: 100%;
+}
+
+.vision-meta-tag {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--slate-muted);
+  letter-spacing: -0.5px;
+  white-space: nowrap;
+}
+
+.vision-bold-statement {
+  font-size: 2.1rem;
+  font-weight: 800;
+  line-height: 1.3;
+  color: var(--primary-navy);
+  letter-spacing: -1px;
+  max-width: 620px;
+}
+
+/* --- VISION + MISSION CARDS --- */
+.vision-split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.vision-card {
+  background: #F8FAFC;
+  border: 1px solid #E2E8F0;
+  border-radius: 24px;
+  padding: 2.75rem;
+  transition: var(--transition-fast);
+}
+
+.vision-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--card-shadow);
+}
+
+.vision-card--accent {
+  background: linear-gradient(160deg, var(--primary-navy) 0%, #15355c 100%);
+  border-color: transparent;
+}
+
+.vision-card-icon {
+  width: 54px;
+  height: 54px;
+  border-radius: 14px;
+  background: var(--primary-navy);
+  color: var(--neon-solar);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.25rem;
+}
+
+.vision-card--accent .vision-card-icon {
+  background: var(--neon-solar);
+  color: #061121;
+}
+
+.vision-card h4 {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--primary-navy);
+  margin-bottom: 1rem;
+}
+
+.vision-card--accent h4 {
+  color: var(--pure-white);
+}
+
+.vision-card p {
+  font-size: 0.95rem;
+  line-height: 1.65;
+  color: #4A5568;
+}
+
+.vision-card--accent p {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* --- CORE VALUES ROW --- */
+.vision-values-row {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.vision-values-label {
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--slate-muted);
+}
+
+.vision-values-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.vision-value-pill {
+  padding: 0.6rem 1.25rem;
+  border-radius: 100px;
+  border: 1px solid #E2E8F0;
+  background: #ffffff;
+  color: var(--primary-navy);
+  font-size: 0.85rem;
+  font-weight: 600;
+  transition: var(--transition-fast);
+}
+
+.vision-value-pill:hover {
+  background: var(--accent-green);
+  color: #ffffff;
+  border-color: var(--accent-green);
+  transform: translateY(-2px);
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 1024px) {
+  .vision-tagged-row { grid-template-columns: 1fr; gap: 1.5rem; }
+}
+
+@media (max-width: 768px) {
+  .vision-split { grid-template-columns: 1fr; }
+  .vision-bold-statement { font-size: 1.6rem; }
+}

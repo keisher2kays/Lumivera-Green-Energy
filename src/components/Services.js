@@ -69,7 +69,7 @@ const Services = () => {
             />
           </div>
           
-          <div className="why-content-panel">
+          {/* <div className="why-content-panel">
             <h3>Why Choose LumiVera?</h3>
             <p>
               We engineer beyond hardware. By integrating precision automated logistics systems and intelligent grid diagnostics, we completely eliminate cross-border uncertainty, ensuring your assets perform optimally across every border.
@@ -93,7 +93,36 @@ const Services = () => {
                 <p>Real-time load tracking and performance updates right on your phone.</p>
               </div>
             </div>
-          </div>
+          </div> */}
+
+          <div className="why-content-panel">
+  <h3>Why Choose LumiVera?</h3>
+  <p>
+    Our clients benefit from professional project management, high-quality
+    renewable energy solutions, and an international business outlook — backed
+    by innovative engineering, competitive pricing, and long-term partnerships
+    built on trust and excellence.
+  </p>
+
+  <div className="checklist-grid">
+    <div className="checklist-item">
+      <h5><CheckCircle2 size={16} color="#1E6B38" strokeWidth={2.5} /> Top Tier Panels</h5>
+      <p>High-quality renewable energy solutions built for lasting performance.</p>
+    </div>
+    <div className="checklist-item">
+      <h5><CheckCircle2 size={16} color="#1E6B38" strokeWidth={2.5} /> Certified Installers</h5>
+      <p>Professional project management from consultation through commissioning.</p>
+    </div>
+    <div className="checklist-item">
+      <h5><CheckCircle2 size={16} color="#1E6B38" strokeWidth={2.5} /> Secure UK Desk</h5>
+      <p>An international business outlook with operations in Zimbabwe and the UK.</p>
+    </div>
+    <div className="checklist-item">
+      <h5><CheckCircle2 size={16} color="#1E6B38" strokeWidth={2.5} /> 5-Year Warranty</h5>
+      <p>Reliable after-sales support and long-term partnerships built on trust.</p>
+    </div>
+  </div>
+</div>
 
 
 
