@@ -17,6 +17,8 @@ import ContactView from './components/ContactView';
 import FooterMarquee from './components/FooterMarquee';
 import CartDrawer from './components/CartDrawer';
 import { CartProvider } from './components/CartContext';
+import AgriSolutions from './components/AgriSolutions';
+import BackToTop from './components/BackToTop';
 
 function App() {
   return (
@@ -29,6 +31,7 @@ function App() {
           <section id="about"><AboutUs /></section>
           <section id='vision'><VisionMission/></section>
           <section id="services"><Services /></section>
+          <section id="agri-solutions"><AgriSolutions /></section>
           <section id="products"><OurProducts /></section>
           <section id="packages"><Packages /></section>
            <section id="team"><OurTeam /></section>
@@ -38,6 +41,7 @@ function App() {
 
         <FooterMarquee />
         <CartDrawer />
+        <BackToTop />
       </div>
     </CartProvider>
   );

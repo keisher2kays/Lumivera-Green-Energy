@@ -112,7 +112,7 @@ const OurProducts = () => {
 
         {/* ROW 1: TAGGED ZONE — matches About / Services top alignment */}
         <div className="products-tagged-row">
-          <div className="products-meta-tag animate-mask">/ Our Products</div>
+          <div className="products-meta-tag animate-mask"> Our Products</div>
 
           <h3 className="products-bold-statement animate-slide-blur">
             Equipment engineered to outlast the grid.

@@ -22,7 +22,7 @@ const Services = () => {
         
         {/* ROW 1: TAGGED ZONE (Keeps the top aligned with your About Me page layout) */}
         <div className="services-tagged-row">
-          <div className="services-meta-tag animate-mask">/ Our Services</div>
+          <div className="services-meta-tag animate-mask"> Our Services</div>
           
           <div className="services-main-stream animate-slide-blur delay-1">
             {/* CORE CATEGORY VERTICALS */}
@@ -32,7 +32,7 @@ const Services = () => {
                   <Home size={22} color="#1E6B38" strokeWidth={2} />
                 </div>
                 <div>
-                  <h4>Residential Solar</h4>
+                  <h4>Residential Solar System</h4>
                   <p>Complete clean power architecture configured natively for domestic estates and family properties.</p>
                 </div>
               </div>
@@ -42,7 +42,7 @@ const Services = () => {
                   <Building2 size={22} color="#1E6B38" strokeWidth={2} />
                 </div>
                 <div>
-                  <h4>Commercial Solar</h4>
+                  <h4>Commercial Solar System</h4>
                   <p>High-yield commercial solar setups engineered to support retail, agricultural, or production hubs.</p>
                 </div>
               </div>
@@ -69,32 +69,7 @@ const Services = () => {
             />
           </div>
           
-          {/* <div className="why-content-panel">
-            <h3>Why Choose LumiVera?</h3>
-            <p>
-              We engineer beyond hardware. By integrating precision automated logistics systems and intelligent grid diagnostics, we completely eliminate cross-border uncertainty, ensuring your assets perform optimally across every border.
-            </p>
-            
-            <div className="checklist-grid">
-              <div className="checklist-item">
-                <h5><CheckCircle2 size={16} color="#1E6B38" strokeWidth={2.5} /> Top Tier Panels</h5>
-                <p>Monocrystalline premium high-yield hardware configurations.</p>
-              </div>
-              <div className="checklist-item">
-                <h5><CheckCircle2 size={16} color="#1E6B38" strokeWidth={2.5} /> Certified Installers</h5>
-                <p>In-house technical field installation crews based in Harare.</p>
-              </div>
-              <div className="checklist-item">
-                <h5><CheckCircle2 size={16} color="#1E6B38" strokeWidth={2.5} /> Secure UK Desk</h5>
-                <p>Invoicing, payments, and legal security settled transparently in London.</p>
-              </div>
-              <div className="checklist-item">
-                <h5><CheckCircle2 size={16} color="#1E6B38" strokeWidth={2.5} /> 5-Year Warranty</h5>
-                <p>Real-time load tracking and performance updates right on your phone.</p>
-              </div>
-            </div>
-          </div> */}
-
+         
           <div className="why-content-panel">
   <h3>Why Choose LumiVera?</h3>
   <p>

@@ -22,7 +22,7 @@ const VisionMission = () => {
 
         {/* ROW 1: TAGGED ZONE — matches About / Services / Products */}
         <div className="vision-tagged-row">
-          <div className="vision-meta-tag animate-mask">/ Vision &amp; Mission</div>
+          <div className="vision-meta-tag animate-mask"> Vision &amp; Mission</div>
           <h3 className="vision-bold-statement animate-slide-blur">
             What drives everything we build.
           </h3>

@@ -7,12 +7,12 @@ import moyo from '../assets/moyo.jpeg';
 import ali from '../assets/ali.jpeg';
 
 const team = [
-  {
-    image: hadi,
-    name: 'Hadi A.',
-    role: 'Chief Executive Officer',
-    bio: 'Leads overall strategy and partnerships across both markets, ensuring every project meets LumiVera\'s engineering and service standards.',
-  },
+  // {
+  //   image: hadi,
+  //   name: 'Hadi A.',
+  //   role: 'Chief Executive Officer',
+  //   bio: 'Leads overall strategy and partnerships across both markets, ensuring every project meets LumiVera\'s engineering and service standards.',
+  // },
  {
   image: liberty,
   name: 'Liberty Chizemo',
@@ -40,7 +40,7 @@ const OurTeam = () => {
 
         {/* Left-Aligned Heading Block — matches About / Services / Products */}
         <div className="team-heading-block">
-          <div className="team-meta-tag animate-mask">/ Our Team</div>
+          <div className="team-meta-tag animate-mask"> Our Team</div>
           <h2 className="team-bold-statement animate-slide-blur">
             Engineered in Harare. Managed Globally.
           </h2>

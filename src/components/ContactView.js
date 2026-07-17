@@ -48,7 +48,7 @@ const ContactView = () => {
 
         {/* ROW 1: TAGGED ZONE — matches About / Services / Products / Team */}
         <div className="contact-tagged-row">
-          <div className="contact-meta-tag animate-mask">/ Contact</div>
+          <div className="contact-meta-tag animate-mask"> Contact</div>
           <h3 className="contact-bold-statement animate-slide-blur">
             Power your home. Empower your future.
           </h3>
@@ -59,31 +59,13 @@ const ContactView = () => {
 
           {/* LEFT: CONTACT INFO */}
           <div className="contact-info-column animate-slide-blur delay-1">
-            {/* <div className="contact-info-block" style={{ borderTop: '4px solid #1E6B38' }}>
-              <Phone size={28} color="#1E6B38" strokeWidth={2} />
-              <h4>Direct Line &amp; WhatsApp</h4>
-              <p className="contact-info-value">+44 7909 787374</p>
-              <p className="contact-info-copy">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Connect instantly
-                with our diaspora accounts desk.
-              </p>
-            </div> */}
 
-            {/* <div className="contact-info-block" style={{ borderTop: '4px solid #0B2240' }}>
-              <Mail size={28} color="#0B2240" strokeWidth={2} />
-              <h4>Corporate Email</h4>
-              <p className="contact-info-value">info@lumiveragreenenergy.com</p>
-              <p className="contact-info-copy">
-                Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Submit
-                your load charts and architectural plans directly.
-              </p>
-            </div> */}
             <div className="contact-info-block" style={{ borderTop: '4px solid #1E6B38' }}>
   <Phone size={28} color="#1E6B38" strokeWidth={2} />
   <h4>Direct Line &amp; WhatsApp</h4>
-  <p className="contact-info-value">+44 7909 787374</p>
+  <p className="contact-info-value">+263 773 440 577</p>
   <p className="contact-info-copy">
-    Reach our accounts desk directly for enquiries, quotes, or support —
+    Reach our accounts desk via Whatsapp and phone calls directly for enquiries, quotes, or support —
     whether you're in Zimbabwe or abroad.
   </p>
 </div>
@@ -98,15 +80,7 @@ const ContactView = () => {
   </p>
 </div>
 
-            {/* <div className="pipeline-banner">
-              <Globe2 size={26} color="#DDF23D" />
-              <h4>From the UK to Zimbabwe</h4>
-              <p className="pipeline-quote">&ldquo;We light up your future.&rdquo;</p>
-              <p className="pipeline-copy">
-                Pay comfortably from wherever you are — we handle sourcing, delivery,
-                and installation back home.
-              </p>
-            </div> */}
+          
 
             <div className="pipeline-banner">
   <Globe2 size={26} color="#DDF23D" />
@@ -126,7 +100,7 @@ const ContactView = () => {
                 <CheckCircle2 size={44} color="#1E6B38" strokeWidth={2} />
                 <h4>Thank you — your request is in</h4>
                 <p>
-                  Lorem ipsum dolor sit amet. A member of the LumiVera team will be in
+                   A member of the LumiVera team will be in
                   touch shortly to confirm details and next steps.
                 </p>
               </div>

@@ -19,7 +19,7 @@ const AboutUs = () => {
         
         {/* ROW 1: THE ASYMMETRIC HEADER SPLIT */}
         <div className="about-header-split">
-          <div className="about-meta-tag animate-mask">/ About Us</div>
+          <div className="about-meta-tag animate-mask"> About Us</div>
           <div>
             <h3 className="about-hero-statement">
               {words.map((word, index) => (

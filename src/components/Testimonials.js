@@ -1,6 +1,7 @@
 import React from 'react';
 import clouds from '../assets/clouds.jpg';
 
+
 const testimonialData = [
   {
     stars: '★★★★★',
@@ -32,7 +33,7 @@ const TestimonialsPage = () => {
 
         {/* ROW 1: TAGGED ZONE — matches About / Services / Products / Team top alignment */}
         <div className="testi-tagged-row">
-          <div className="testi-meta-tag animate-mask">/ Testimonials</div>
+          <div className="testi-meta-tag animate-mask"> Testimonials</div>
           <h1 className="testi-bold-statement animate-slide-blur">
             Trusted by creatives and leaders across various industries.
           </h1>
