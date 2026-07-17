@@ -1,7 +1,7 @@
 
 
 import React from 'react';
-import hadi from '../assets/hadi.jpeg';
+// import hadi from '../assets/hadi.jpeg';
 import liberty from '../assets/liberty.jpeg';
 import moyo from '../assets/moyo.jpeg';
 import ali from '../assets/ali.jpeg';
