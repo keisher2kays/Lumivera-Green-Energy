@@ -1,18 +1,12 @@
 
 
 import React from 'react';
-// import hadi from '../assets/hadi.jpeg';
 import liberty from '../assets/liberty.jpeg';
 import moyo from '../assets/moyo.jpeg';
 import ali from '../assets/ali.jpeg';
 
 const team = [
-  // {
-  //   image: hadi,
-  //   name: 'Hadi A.',
-  //   role: 'Chief Executive Officer',
-  //   bio: 'Leads overall strategy and partnerships across both markets, ensuring every project meets LumiVera\'s engineering and service standards.',
-  // },
+ 
  {
   image: liberty,
   name: 'Liberty Chizemo',

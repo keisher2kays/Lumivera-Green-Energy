@@ -942,6 +942,98 @@ body {
   .products-bold-statement { font-size: 1.6rem; }
 }
 
+/* Product interactive titles */
+.product-interactive-title {
+  transition: color 0.2s ease;
+}
+.product-interactive-title:hover {
+  color: #2ecc71; /* Highlight with a premium green color on hover */
+  text-decoration: underline;
+}
+
+/* More info modal popup window */
+.product-info-modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+}
+
+.product-info-modal-content {
+  background: #ffffff;
+  color: #1a1a1a;
+  width: 90%;
+  max-width: 550px;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  animation: modalFadeIn 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.product-info-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #e1e8ed;
+  padding-bottom: 12px;
+  margin-bottom: 16px;
+}
+
+.product-info-modal-header h3 {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.product-info-close-btn {
+  background: none;
+  border: none;
+  font-size: 1.75rem;
+  cursor: pointer;
+  color: #8899a6;
+  line-height: 1;
+}
+
+.product-info-close-btn:hover {
+  color: #ff4d4d;
+}
+
+.product-info-modal-meta {
+  display: flex;
+  gap: 20px;
+  font-size: 0.9rem;
+  color: #5b7083;
+  margin-bottom: 16px;
+  background: #f7f9fa;
+  padding: 10px 14px;
+  border-radius: 6px;
+}
+
+.product-info-modal-text {
+  font-size: 0.98rem;
+  line-height: 1.6;
+  color: #333333;
+  margin: 0;
+}
+
+@keyframes modalFadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95) translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
 /* ==========================================================================
    BENTO GRID (kept in case still referenced)
    ========================================================================== */
@@ -1218,17 +1310,40 @@ body {
   max-width: 640px;
 }
 
-.contact-split { display: grid; grid-template-columns: 0.85fr 1.15fr; gap: 2.5rem; align-items: start; }
+/* CHANGED: Changed align-items from start to stretch to unify column heights */
+.contact-split { 
+  display: grid; 
+  grid-template-columns: 0.85fr 1.15fr; 
+  gap: 2.5rem; 
+  align-items: stretch; 
+}
 
-.contact-info-column { display: flex; flex-direction: column; gap: 1.5rem; }
+/* CHANGED: Added height and space-between justification to fill space evenly */
+.contact-info-column { 
+  display: flex; 
+  flex-direction: column; 
+  gap: 1.5rem; 
+  height: 100%;
+  justify-content: space-between;
+}
 
-.contact-info-block { background: var(--pure-white); padding: 2.25rem; border-radius: 20px; box-shadow: 0 15px 35px rgba(6, 21, 43, 0.05); }
+/* CHANGED: Added flex: 1 so each card shares space proportionally */
+.contact-info-block { 
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centers layout internally if content is short */
+  background: var(--pure-white); 
+  padding: 2.25rem; 
+  border-radius: 20px; 
+  box-shadow: 0 15px 35px rgba(6, 21, 43, 0.05); 
+}
 
 .contact-info-block h4 { margin: 1rem 0 0.5rem 0; color: var(--primary-navy); font-size: 1.3rem; }
 
 .contact-info-value { font-weight: 800; color: var(--accent-green); font-size: 1.15rem; letter-spacing: 0.3px; word-break: break-word; }
 
-.contact-info-copy { font-size: 0.85rem; color: #64748B; margin-top: 1rem; line-height: 1.5; }
+.contact-info-copy { font-size: 0.85rem; color: #64748B; margin-top: 0.5rem; line-height: 1.5; }
 
 .pipeline-banner {
   background: linear-gradient(135deg, var(--primary-navy) 0%, #15355c 100%);
@@ -1242,16 +1357,21 @@ body {
 .pipeline-quote { color: #E2E8F0; font-style: italic; font-size: 1.05rem; }
 .pipeline-copy { color: #94A3B8; font-size: 0.85rem; margin-top: 1rem; line-height: 1.5; }
 
+/* CHANGED: Ensured container height fills layout structural column completely */
 .contact-form-column {
   background: var(--pure-white);
   border-radius: 24px;
   padding: 2.75rem;
   box-shadow: 0 20px 45px rgba(6, 21, 43, 0.06);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 .contact-form-title { font-size: 1.35rem; font-weight: 800; color: var(--primary-navy); margin-bottom: 1.75rem; }
 
-.contact-order-form { display: flex; flex-direction: column; gap: 1.35rem; }
+/* CHANGED: Flex grow on the form ensures it stretches clean if success layout toggles */
+.contact-order-form { display: flex; flex-direction: column; gap: 1.35rem; flex-grow: 1; }
 
 .form-field-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1.35rem; }
 
@@ -1282,7 +1402,7 @@ body {
 }
 
 .contact-form-submit {
-  margin-top: 0.5rem;
+  margin-top: auto; /* Push submit button to the bottom nicely if container stretches */
   background: var(--neon-solar);
   color: #061121;
   font-weight: 700;
@@ -1299,13 +1419,14 @@ body {
 
 .contact-form-error { font-size: 0.85rem; color: #DC2626; text-align: center; }
 
-.contact-form-success { display: flex; flex-direction: column; align-items: center; text-align: center; gap: 0.75rem; padding: 3.5rem 1.5rem; }
+.contact-form-success { display: flex; flex-direction: column; align-items: center; text-align: center; justify-content: center; gap: 0.75rem; padding: 3.5rem 1.5rem; flex-grow: 1; }
 .contact-form-success h4 { font-size: 1.3rem; color: var(--primary-navy); }
 .contact-form-success p { font-size: 0.9rem; color: #64748B; max-width: 320px; }
 
 @media (max-width: 1024px) {
   .contact-tagged-row { grid-template-columns: 1fr; gap: 1.5rem; }
   .contact-split { grid-template-columns: 1fr; }
+  .contact-info-column { gap: 1.5rem; } /* Reverts tracking height adjustments cleanly when stacked vertically */
 }
 
 @media (max-width: 640px) {
@@ -1313,7 +1434,6 @@ body {
   .form-field-row { grid-template-columns: 1fr; }
   .contact-form-column { padding: 1.75rem; }
 }
-
 /* ==========================================================================
    CART — ICON, DRAWER, CHECKOUT
    ========================================================================== */
