@@ -13,7 +13,7 @@ import {
 import robot from '../assets/robot.png';
 import avondale from '../assets/avondale.jpg';
 import goromonzi from '../assets/goromonzi.jpg';
-import greysite from '../assets/greysite.webp';
+import uk from '../assets/uk.jpg';
 
 const Services = () => {
   return (
@@ -148,6 +148,21 @@ const Services = () => {
           <h4 className="section-internal-title">Featured Installations</h4>
           
           <div className="projects-gallery-grid">
+    <div className="project-showcase-card">
+              <div className="project-card-image-wrapper">
+                <img src= {uk} alt="Greystone Park Domestic Build" />
+
+{/* Goromonzi Region — aerial farmland */}
+              </div>
+              <div className="project-card-meta-content">
+                <div className="project-location-badge">United Kingdom</div>
+                <h5>Residential Rooftop Solar Array</h5>
+                <p>A  tilt-frame rooftop installation completed for a residential property in the UK, demonstrating  the same engineering standard our clients can expect back home in Zimbabwe . Panels were mounted flat roof topsection using adjustable tilt brackets to maximize sun exposure year-round, with clean cable routing and full weatherproofing throughout. </p>
+              </div>
+            </div>
+
+
+
             <div className="project-showcase-card">
               <div className="project-card-image-wrapper">
                 <img src="https://images.unsplash.com/photo-1613665813446-82a78c468a1d?w=800" alt="Borrowdale Estate Project" />
@@ -171,19 +186,7 @@ const Services = () => {
               </div>
             </div>
 
-            <div className="project-showcase-card">
-              <div className="project-card-image-wrapper">
-                {/* <img src="https://images.unsplash.com/photo-1620714223084-8fcacc6dfd8d?w=800" alt="Greystone Park Domestic Build" /> */}
-                <img src= {greysite} alt="Greystone Park Domestic Build" />
-
-{/* Goromonzi Region — aerial farmland */}
-              </div>
-              <div className="project-card-meta-content">
-                <div className="project-location-badge">Greystone Park, Harare</div>
-                <h5>3kVA Essential Micro-Grid</h5>
-                <p>A clean, smart-metered household optimization setup funded by a UK diaspora client to support their family property, maintaining running water systems and security lights consistently.</p>
-              </div>
-            </div>
+        
 
             <div className="project-showcase-card">
               <div className="project-card-image-wrapper">

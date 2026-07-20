@@ -1,6 +1,4 @@
 
-
-
 // src/components/OurProducts.js
 import React, { useState } from 'react';
 import { useCart } from '../components/CartContext';
