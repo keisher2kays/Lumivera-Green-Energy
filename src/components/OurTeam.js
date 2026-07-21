@@ -16,8 +16,8 @@ const team = [
  {
   image: moyo,
   name: 'Elizabeth Moyo',
-  role: 'Director & Shareholder',
-  bio: 'Plays a key role in corporate leadership, business operations, stakeholder engagement, and the promotion of innovative renewable energy initiatives that align with the company\'s vision.',
+  role: 'Finance Director',
+  bio: 'Oversees financial strategy, budgeting, and investment planning to ensure the company\'s renewable energy projects are built on a solid financial foundation. Brings strong expertise in stakeholder engagement and corporate governance, helping align financial decisions with the company\'s long-term vision for sustainable energy growth.',
 },
   {
     image: ali,

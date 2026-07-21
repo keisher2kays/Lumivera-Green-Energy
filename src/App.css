@@ -812,7 +812,49 @@ body {
 /* ==========================================================================
    OUR PRODUCTS — NAVY VARIANT (alternates with white sections)
    ========================================================================== */
+/* CATEGORY FILTER BAR */
+.products-filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  align-items: center;
+}
 
+.products-filter-btn {
+  padding: 0.65rem 1.3rem;
+  border-radius: 100px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.05);
+  color: #a0aec0;
+  font-weight: 600;
+  font-size: 0.88rem;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.products-filter-btn:hover {
+  border-color: var(--neon-solar);
+  color: var(--pure-white);
+  background: rgba(221, 242, 61, 0.08);
+}
+
+.products-filter-btn.active {
+  background: var(--neon-solar);
+  color: #061121;
+  border-color: var(--neon-solar);
+  font-weight: 700;
+  box-shadow: 0 0 15px rgba(221, 242, 61, 0.3);
+}
+
+@media (max-width: 640px) {
+  .products-filter-bar {
+    gap: 0.5rem;
+  }
+  .products-filter-btn {
+    padding: 0.5rem 0.9rem;
+    font-size: 0.8rem;
+  }
+}
 .products-viewport {
   background-color: var(--primary-navy);
   color: var(--pure-white);
