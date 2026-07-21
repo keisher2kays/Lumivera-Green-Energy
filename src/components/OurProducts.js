@@ -3,9 +3,9 @@
 import React, { useState } from 'react';
 import { useCart } from '../components/CartContext';
 import one from '../assets/one.jpg';
-// import inverters from '../assets/inverters.jpg';
-// import lithium from '../assets/lithium.jpg';
-import kit from '../assets/kit.jpg';
+import phase from '../assets/phase.jpg';
+import industry from '../assets/industry.jpg';
+import kit from '../assets/kit.jpg'; 
 import box from '../assets/box.jpg';
 import breaker from '../assets/breaker.jpg';
 import controller from '../assets/controller.jpg';
@@ -15,6 +15,8 @@ import surge from '../assets/surge.jpg';
 import drone from '../assets/drone.jpg';
 import youthPower from '../assets/youthpower.jpg';
 import inverter from '../assets/white.jpg'
+import five from '../assets/5k.jpg'
+import fifteen from '../assets/15k.jpg'
 
 
 const mainProducts = [
@@ -22,7 +24,7 @@ const mainProducts = [
     image: one,
     name: 'Monocrystalline Solar Panel',
     spec: '550W',
-    price: 'USD 120',
+    price: 'USD120',
     priceValue: 120,
     desc: 'High-yield panels engineered for consistent output even on overcast days.',
     moreInfo: 'Manufactured by WHC Solar. Features standard A-grade monocrystalline cells with a 21.3% efficiency rating. Built with anti-reflective tempered glass and a heavy-duty anodized aluminum frame to withstand harsh local weather conditions. Comes with a 25-year linear power output warranty.',
@@ -65,6 +67,60 @@ const moreProducts = [
     priceValue: 95,
     desc: 'Maximizes energy harvest from your panels across changing light conditions.',
     moreInfo: 'High-efficiency Maximum Power Point Tracking (MPPT) architecture with up to 98% conversion efficiency. Automatically detects 12V/24V/48V system banks and includes full LCD performance logs.',
+  },
+  {
+    image: phase,
+    name: '3-Phase Hybrid Inverter',
+    spec: '12kVA',
+    price: 'USD 1,550',
+    priceValue: 1550,
+    desc: 'Industrial-grade 3-phase inverter built for commercial and heavy-load properties.',
+    moreInfo: 'Full 3-phase hybrid inverter designed for commercial buildings, factories, and larger estates running heavy machinery or multi-phase equipment. Supports parallel operation for expanding capacity as your load grows, with the same automatic solar/grid/battery switching as our residential units.',
+  },
+  {
+    image: industry,
+    name: 'Industrial Hybrid Inverter',
+    spec: '20kVA',
+    price: 'USD 3,300',
+    priceValue: 3300,
+    desc: 'Our highest-capacity inverter, built for large commercial and industrial installations.',
+    moreInfo: 'Top-tier industrial hybrid inverter for factories, mines, agricultural estates, and large commercial complexes with demanding power requirements. Engineered for continuous heavy-duty operation with advanced thermal management and remote monitoring capability.',
+  },
+  {
+    image: five,
+    name: 'Lithium Battery',
+    spec: '51.2V / 100Ah (5kWh)',
+    price: 'USD 480',
+    priceValue: 480,
+    desc: 'Entry-level lithium storage — an affordable way to start your backup system.',
+    moreInfo: 'Compact LiFePO4 lithium battery ideal for essential household loads — lights, routers, TVs, and small appliances. A cost-effective entry point into lithium storage with the same 8,000+ cycle life as our larger units, just in a smaller footprint.',
+  },
+  // {
+  //   image: 'https://placehold.co/500x360/0B2240/DDF23D?text=200Ah+Battery',
+  //   name: 'Lithium Battery',
+  //   spec: '51.2V / 200Ah (10kWh)',
+  //   price: 'USD 900',
+  //   priceValue: 900,
+  //   desc: 'Our most popular capacity — matches the battery spec used across all three packages.',
+  //   moreInfo: 'Mid-capacity LiFePO4 lithium battery, the same 200Ah unit referenced in our Basic, Standard, and Premium packages. Powers refrigerators, water pumps, and standard household circuits comfortably through extended load-shedding periods.',
+  // },
+  // {
+  //   image: 'https://placehold.co/500x360/0B2240/DDF23D?text=8kVA+Inverter',
+  //   name: 'Hybrid Solar Inverter',
+  //   spec: '8kVA',
+  //   price: 'USD 1,050',
+  //   priceValue: 1050,
+  //   desc: 'The exact inverter spec used in our Premium Package — now available on its own.',
+  //   moreInfo: 'The same 8kVA hybrid inverter referenced in our Premium Package, sized for larger households or small commercial setups. Pure sine wave output with automatic solar/grid/battery switching, built to comfortably handle higher simultaneous appliance loads.',
+  // },
+  {
+    image: fifteen,
+    name: 'Lithium Battery',
+    spec: '51.2V / 300Ah (15kWh)',
+    price: 'USD 1,350',
+    priceValue: 1350,
+    desc: 'Sits between our 200Ah and 400Ah units — for homes that need more than standard, less than industrial.',
+    moreInfo: 'Mid-to-high capacity LiFePO4 lithium battery, ideal for larger households running multiple fridges, water pumps, and extended backup during long load-shedding stretches — without stepping all the way up to our full industrial-capacity unit.',
   },
   {
     image: box,
