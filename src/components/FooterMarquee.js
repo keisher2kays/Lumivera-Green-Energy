@@ -52,7 +52,11 @@ const FooterMarquee = () => {
               </li>
               <li>
                 <MapPin size={15} strokeWidth={2} />
-                <span>Serving UK Diaspora &amp; Homes Across Zimbabwe</span>
+                <span>66 Paul Street,
+                      England London
+                      EC2A 4NA
+                      GB
+                </span>
               </li>
             </ul>
           </div>
