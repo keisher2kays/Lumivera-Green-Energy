@@ -2308,3 +2308,352 @@ body {
     height: 44px;
   }
 }
+
+
+/* ==========================================================================
+   BOREHOLE DRILLING - MODERN ALTERNATIVE LAYOUT
+   ========================================================================== */
+
+.borehole-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 24px;
+  color: #ffffff;
+}
+
+/* --------------------------------------------------------------------------
+   1. HERO BANNER
+   -------------------------------------------------------------------------- */
+.borehole-hero {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding: 60px 40px;
+  background: linear-gradient(135deg, rgba(18, 56, 33, 0.8) 0%, rgba(14, 116, 144, 0.25) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 28px;
+  margin-bottom: 80px;
+}
+
+.borehole-pill {
+  display: inline-block;
+  background: rgba(56, 189, 248, 0.15);
+  color: #38bdf8;
+  border: 1px solid rgba(56, 189, 248, 0.3);
+  padding: 6px 16px;
+  border-radius: 30px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 16px;
+  text-transform: uppercase;
+}
+
+.borehole-hero-content h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  line-height: 1.15;
+  margin-bottom: 20px;
+}
+
+.borehole-hero-content p {
+  font-size: 1.15rem;
+  color: #cbd5e1;
+  max-width: 700px;
+  line-height: 1.6;
+  margin-bottom: 28px;
+}
+
+.borehole-btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: #2CA636;
+  color: #ffffff;
+  padding: 14px 28px;
+  border-radius: 12px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.borehole-btn-primary:hover {
+  background: #23852b;
+  transform: translateY(-2px);
+}
+
+.borehole-hero-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 32px;
+}
+
+.stat-card h3 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #38bdf8;
+  margin-bottom: 4px;
+}
+
+.stat-card p {
+  font-size: 0.9rem;
+  color: #94a3b8;
+}
+
+/* --------------------------------------------------------------------------
+   2. CORE SERVICES SPLIT CARDS
+   -------------------------------------------------------------------------- */
+.borehole-section-header {
+  margin-bottom: 40px;
+}
+
+.borehole-section-header h2 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.borehole-section-header p {
+  color: #94a3b8;
+  font-size: 1.05rem;
+}
+
+.borehole-split-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 28px;
+  margin-bottom: 90px;
+}
+
+.borehole-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 32px;
+  transition: all 0.3s ease;
+}
+
+.borehole-card:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: #38bdf8;
+  transform: translateY(-4px);
+}
+
+.borehole-card-icon {
+  width: 52px;
+  height: 52px;
+  background: rgba(56, 189, 248, 0.12);
+  color: #38bdf8;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 24px;
+}
+
+.borehole-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 12px;
+}
+
+.borehole-card p {
+  font-size: 0.92rem;
+  color: #94a3b8;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.borehole-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.borehole-list li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.85rem;
+  color: #e2e8f0;
+}
+
+.borehole-list li svg {
+  color: #2CA636;
+}
+
+/* --------------------------------------------------------------------------
+   3. TECHNICAL SHOWCASE (FEATURED SPLIT)
+   -------------------------------------------------------------------------- */
+.borehole-tech-showcase {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 28px;
+  padding: 40px;
+  margin-bottom: 90px;
+}
+
+.tech-image-wrapper {
+  position: relative;
+  width: 100%;
+  height: 420px;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.tech-image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.tech-badge {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  background: rgba(18, 56, 33, 0.85);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 8px 16px;
+  border-radius: 12px;
+  font-size: 0.85rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #ffffff;
+}
+
+.tech-content h2 {
+  font-size: 2.2rem;
+  margin-bottom: 16px;
+}
+
+.tech-content > p {
+  color: #94a3b8;
+  line-height: 1.6;
+  margin-bottom: 32px;
+}
+
+.tech-spec-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.tech-spec-item {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+.spec-number {
+  background: rgba(56, 189, 248, 0.12);
+  color: #38bdf8;
+  font-weight: 700;
+  padding: 8px 12px;
+  border-radius: 10px;
+  font-size: 0.9rem;
+}
+
+.tech-spec-item h4 {
+  font-size: 1.05rem;
+  margin-bottom: 4px;
+}
+
+.tech-spec-item p {
+  font-size: 0.85rem;
+  color: #94a3b8;
+}
+
+/* --------------------------------------------------------------------------
+   4. RECENT DRILLING PROJECTS
+   -------------------------------------------------------------------------- */
+.projects-flex-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 28px;
+}
+
+.project-panel {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.project-panel:hover {
+  border-color: #2CA636;
+  transform: translateY(-4px);
+}
+
+.project-img-box {
+  position: relative;
+  width: 100%;
+  height: 200px;
+}
+
+.project-img-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.project-tag {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: rgba(0, 0, 0, 0.65);
+  backdrop-filter: blur(6px);
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #38bdf8;
+}
+
+.project-details {
+  padding: 24px;
+}
+
+.project-details h4 {
+  font-size: 1.15rem;
+  margin-bottom: 8px;
+}
+
+.project-details p {
+  font-size: 0.875rem;
+  color: #94a3b8;
+  line-height: 1.5;
+}
+
+/* --------------------------------------------------------------------------
+   RESPONSIVE DESIGN
+   -------------------------------------------------------------------------- */
+@media (max-width: 992px) {
+  .borehole-tech-showcase {
+    grid-template-columns: 1fr;
+  }
+
+  .tech-image-wrapper {
+    height: 300px;
+  }
+}
+
+@media (max-width: 600px) {
+  .borehole-hero {
+    padding: 32px 20px;
+  }
+
+  .borehole-hero-content h1 {
+    font-size: 2.1rem;
+  }
+}

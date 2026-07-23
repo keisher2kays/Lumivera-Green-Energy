@@ -19,6 +19,7 @@ import CartDrawer from './components/CartDrawer';
 import { CartProvider } from './components/CartContext';
 import AgriSolutions from './components/AgriSolutions';
 import BackToTop from './components/BackToTop';
+import BoreholeDrilling from './components/BoreholeDrilling';
 
 function App() {
   return (
@@ -32,6 +33,7 @@ function App() {
           <section id='vision'><VisionMission/></section>
           <section id="services"><Services /></section>
           <section id="agri-solutions"><AgriSolutions /></section>
+            <section id="Boreholedrilling"><BoreholeDrilling /></section>
           <section id="products"><OurProducts /></section>
           <section id="packages"><Packages /></section>
            <section id="team"><OurTeam /></section>
