@@ -179,7 +179,7 @@ body {
 
 @media (max-width: 480px) {
   .nav-logo-img {
-    height: 60px;
+    height: 85px;
   }
   .nav-wrapper--scrolled .nav-logo-img {
     height: 105px;
