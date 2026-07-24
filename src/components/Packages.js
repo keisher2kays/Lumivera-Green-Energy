@@ -1,49 +1,51 @@
 // src/components/Packages.js
 import React from 'react';
 import { useCart } from '../components/CartContext';
+import solor from '../assets/solar.jpg';
 
 const solarTiers = [
   {
     name: "Basic Package",
     desc: "Perfect for essential home backup, lights, Wi-Fi, and entertainment",
-    price: "From USD 2,450",
-    priceValue: 2450,
-    spec: "4.5kW Kit",
-    image: 'https://placehold.co/500x360/0B2240/DDF23D?text=Basic+Package',
+    price: "From USD 1,160",
+    priceValue: 1160,
+    spec: "3.5kW Kit",
+    image: solor,
     specs: [
-      "3.5kW Hybrid Inverter", 
-      "2.71kWh  Lithium Battery Bank", 
-      "4 x 590W Mono Solar Panels", 
-      "Turnkey Installation, Wiring & Protection Boxes"
+      "4.5kW Hybrid Inverter", 
+      "24V 100Ah Lithium life PO4 Battery", 
+      "4 x 450W Mono Solar Panels", 
+      "Cabling & Protection Kit"
     ]
   },
   {
     name: "Standard Package",
     desc: "Ideal for medium households managing regular load-shedding cycles",
-    price: "From USD 4,850",
-    priceValue: 4850,
+    price: "From USD 2,250",
+    priceValue: 2250,
     spec: "6.2kW Kit",
     image: 'https://placehold.co/500x360/0B2240/DDF23D?text=Standard+Package',
     specs: [
       "WHC 6.2kW Hybrid Inverter", 
-      "15.36kWh Lithium Battery Bank", 
+      "48V 200Ah Lithium Battery", 
       "9 x 590W Mono Solar Panels", 
-      "Turnkey Installation, Wiring & Protection Boxes"
+      "Full DC/AC Protection Box & Accessories"
     ],
     featured: true
   },
   {
     name: "Premium Package",
     desc: "For heavy residential estates, boreholes, and commercial self-sufficiency",
-    price: "From USD 6,250",
-    priceValue: 6250,
+    price: "From USD 5,750",
+    priceValue: 5750,
     spec: "11kW Kit",
     image: 'https://placehold.co/500x360/0B2240/DDF23D?text=Premium+Package',
     specs: [
       "11kW Flagship Hybrid Inverter", 
-      "15.36kWh  Lithium Battery Bank", 
-      "12 x 590W Mono Solar Panels", 
-      "Turnkey Installation, Wiring & Premium Protection Elements"
+      "10.2kwh Lithium LifePO4 Battery", 
+      "15.3kwh Lithium LifePO4 Battery", 
+      "12x 590W Mono Solar Panels ", 
+      "Heavy Duty Protection Kit & Cables"
     ]
   }
 ];
