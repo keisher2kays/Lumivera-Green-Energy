@@ -565,7 +565,7 @@ body {
   .hero-main-text h2 { white-space: normal; }
 }
 @media (max-width: 768px) {
-  .hero-main-text h2 { font-size: 2.8rem; }
+  .hero-main-text h2 { font-size: 2.2rem; }
   .hero-sub-line { font-size: 1rem; }
   .hero-btn-row { width: 100%; }
   .hero-btn-row button { flex: 1; min-width: 160px; text-align: center; justify-content: center; }
