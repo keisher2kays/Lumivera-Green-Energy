@@ -1,7 +1,8 @@
+
+
+
 // // src/components/Hero.js
 // import React from 'react';
-// // import clouds from '../assets/clouds.jpg';
-// // import banner from '../assets/banner.jpg';
 // import panels from '../assets/panels.jpg';
 
 // const Hero = () => {
@@ -20,19 +21,24 @@
 //       <div
 //         className="hero-bg-canvas"
 //         style={{
-//           backgroundImage: `linear-gradient(180deg, rgba(6,17,33,0.35) 0%, rgba(6,17,33,0.85) 100%), url(${panels})`
+//           backgroundImage: `linear-gradient(180deg, rgba(18,56,33,0.35) 0%, rgba(18,56,33,0.85) 100%), url(${panels})`
 //         }}
 //       ></div>
 
 //       <div className="hero-layout-engine hero-layout-engine--banner">
 //         <div className="hero-main-text animate-reveal">
+//           <div className="hero-origin-badge animate-reveal">
+//             🇬🇧 UK Registered Company &nbsp;•&nbsp; Serving Zimbabwe 🇿🇼
+//           </div>
+
 //           <h2>
 //             POWERING A <span className="neon-highlight">SUSTAINABLE</span> FUTURE.
 //           </h2>
 
 //           <p className="hero-sub-line animate-reveal-delayed">
-//             Renewable energy solutions for homes, businesses, and agriculture —
-//             funded with ease by loved ones abroad.
+//             A UK-based renewable energy company delivering trusted solar solutions
+//             to homes, businesses, and communities across Zimbabwe — funded with ease
+//             by loved ones abroad.
 //           </p>
 
 //           <div className="hero-btn-row">
@@ -50,7 +56,6 @@
 // };
 
 // export default Hero;
-
 
 // src/components/Hero.js
 import React from 'react';
@@ -79,7 +84,17 @@ const Hero = () => {
       <div className="hero-layout-engine hero-layout-engine--banner">
         <div className="hero-main-text animate-reveal">
           <div className="hero-origin-badge animate-reveal">
-            🇬🇧 UK Registered Company &nbsp;•&nbsp; Serving Zimbabwe 🇿🇼
+            <img 
+              src="https://flagcdn.com/w20/gb.png" 
+              alt="UK Flag" 
+              style={{ width: '18px', height: 'auto', verticalAlign: 'middle', marginRight: '6px' }} 
+            />
+            UK Registered Company &nbsp;•&nbsp; Serving Zimbabwe 
+            <img 
+              src="https://flagcdn.com/w20/zw.png" 
+              alt="Zimbabwe Flag" 
+              style={{ width: '18px', height: 'auto', verticalAlign: 'middle', marginLeft: '6px' }} 
+            />
           </div>
 
           <h2>

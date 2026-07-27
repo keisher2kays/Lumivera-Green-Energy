@@ -44,11 +44,8 @@ const AboutUs = () => {
           
           <div className="about-text-columns animate-slide-blur delay-3">
             <p className="about-col-para">
-               LumiVera Green Energy is a forward-looking renewable energy company
-              established and registered in the Republic of Zimbabwe and the United
-              Kingdom. Founded with a clear vision of accelerating the transition to
-              clean, sustainable, and affordable energy, we contribute to economic
-              growth, environmental protection, and improved quality of life.
+       
+LumiVera Green Energy is an internationally registered renewable energy company, incorporated in both the Republic of Zimbabwe and the United Kingdom. We are committed to transforming the energy landscape by delivering sustainable, innovative, and cost-effective clean energy solutions that improve lives, strengthen economies, and protect the environment.
             </p>
             <p className="about-col-para">
               Driven by innovation, sustainability, and excellence, we develop and
