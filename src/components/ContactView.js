@@ -250,7 +250,7 @@ const ContactView = () => {
             </a>
 
             <a
-              href="mailto:info@lumiveragreenenergy.com"
+              href="mailto:libertychizemo196@gmail.com"
               className="contact-info-block contact-info-block--link"
               style={{ borderTop: '4px solid #F5A623' }}
             >
