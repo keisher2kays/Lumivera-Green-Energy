@@ -318,11 +318,11 @@ const allProducts = [
     id: 'p26',
     category: 'drones',
     image: delivery,
-    name: 'Logistics & Delivery Drone',
+    name: 'Heavy-Duty 25kg Agricultural Spraying Drone',
     spec: '25kg Payload Capacity',
     priceValue: 2800,
     desc: 'Heavy-lift drone for remote-area equipment delivery and rural logistics support.',
-    moreInfo: 'Heavy-payload logistics drone designed for delivering equipment, medical supplies, or components to hard-to-reach rural sites - a growing use case alongside solar installs in remote areas.',
+    moreInfo: 'High-perfomance drone with a 25kg payload, designed for crop spraying, fertiliser application and precision agriculture. Ideal for commercial farms, plantations and agricultural service providers.',
     isMain: false,
   },
 ];

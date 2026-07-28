@@ -1,6 +1,15 @@
 import React from 'react';
 import clouds from '../assets/clouds.jpg';
-
+import i from '../assets/i.jpg'
+import ii from '../assets/ii.jpg'
+import iii from '../assets/iii.jpg'
+import iv from '../assets/iv.jpg'
+import v from '../assets/v.jpg'
+import vi from '../assets/vi.jpg'
+import vii from '../assets/vii.jpg'
+import viii from '../assets/viii.jpg'
+import viiii from '../assets/viiii.jpg'
+import x from '../assets/x.jpg'
 
 const testimonialData = [
   {
@@ -43,41 +52,41 @@ const TestimonialsPage = () => {
         <div className="testi-collage-grid">
           {/* Column 1: Left Outer (Hidden on Mobile) */}
           <div className="testi-collage-col hide-mobile">
-            <div className="testi-img-box short"><img src="https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?q=80&w=400&auto=format&fit=crop" alt="Solar site" /></div>
-            <div className="testi-img-box tall"><img src="https://images.unsplash.com/photo-1613665813446-82a78c468a1d?q=80&w=400&auto=format&fit=crop" alt="Inverter setup" /></div>
+            <div className="testi-img-box short"><img src={i} alt="Solar site" /></div>
+            <div className="testi-img-box tall"><img src={ii} alt="Inverter setup" /></div>
           </div>
 
           {/* Column 2: Left Inner (Hidden on Mobile) */}
           <div className="testi-collage-col hide-mobile">
             <div className="testi-img-box tall"><img src= {clouds} alt="Rooftop install" /></div>
-            <div className="testi-img-box short"><img src="https://images.unsplash.com/photo-1559348349-86f1f65817fe?q=80&w=400&auto=format&fit=crop" alt="Client relations" /></div>
+            <div className="testi-img-box short"><img src={iii} alt="Client relations" /></div>
           </div>
 
           {/* Column 3: Left Center (Visible) */}
           <div className="testi-collage-col">
-            <div className="testi-img-box center-tall"><img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?q=80&w=400&auto=format&fit=crop" alt="Engineering office" /></div>
+            <div className="testi-img-box center-tall"><img src={iv} alt="Engineering office" /></div>
           </div>
 
           {/* Column 4: True Center Peak (Visible) */}
           <div className="testi-collage-col">
-            <div className="testi-img-box center-peak"><img src="https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=400&auto=format&fit=crop" alt="Corporate desk" /></div>
+            <div className="testi-img-box center-peak"><img src= {v} alt="Corporate desk" /></div>
           </div>
 
           {/* Column 5: Right Center (Visible) */}
           <div className="testi-collage-col">
-            <div className="testi-img-box center-tall"><img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=400&auto=format&fit=crop" alt="Modern structure" /></div>
+            <div className="testi-img-box center-tall"><img src={vi} alt="Modern structure" /></div>
           </div>
 
           {/* Column 6: Right Inner (Hidden on Mobile) */}
           <div className="testi-collage-col hide-mobile">
-            <div className="testi-img-box short"><img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=400&auto=format&fit=crop" alt="Commercial panel" /></div>
-            <div className="testi-img-box tall"><img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=400&auto=format&fit=crop" alt="Team meeting" /></div>
+            <div className="testi-img-box short"><img src={vii} alt="Commercial panel" /></div>
+            <div className="testi-img-box tall"><img src={viii} alt="Team meeting" /></div>
           </div>
 
           {/* Column 7: Right Outer (Hidden on Mobile) */}
           <div className="testi-collage-col hide-mobile">
-            <div className="testi-img-box tall"><img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=400&auto=format&fit=crop" alt="Technical review" /></div>
-            <div className="testi-img-box short"><img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=400&auto=format&fit=crop" alt="System monitoring" /></div>
+            <div className="testi-img-box tall"><img src={viiii} alt="Technical review" /></div>
+            <div className="testi-img-box short"><img src={x} alt="System monitoring" /></div>
           </div>
         </div>
 

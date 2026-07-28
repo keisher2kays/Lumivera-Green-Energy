@@ -36,7 +36,7 @@ const OurTeam = () => {
         <div className="team-heading-block">
           <div className="team-meta-tag animate-mask"> Our Team</div>
           <h2 className="team-bold-statement animate-slide-blur">
-            Engineered in Harare. Managed Globally.
+            Engineered in the United Kingdom. Managed Globally.
           </h2>
         </div>
 
