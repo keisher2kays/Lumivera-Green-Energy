@@ -1,3 +1,4 @@
+
 // src/context/CartContext.js
 import React, { createContext, useContext, useState } from 'react';
 
@@ -11,10 +12,13 @@ export const CartProvider = ({ children }) => {
 
   const addToCart = (product) => {
     setItems((prev) => {
-      const existing = prev.find((i) => i.name === product.name);
+      // Differentiate items by name AND region so UK and Zim items don't collide
+      const existing = prev.find((i) => i.name === product.name && i.region === product.region);
       if (existing) {
         return prev.map((i) =>
-          i.name === product.name ? { ...i, quantity: i.quantity + 1 } : i
+          i.name === product.name && i.region === product.region
+            ? { ...i, quantity: i.quantity + 1 }
+            : i
         );
       }
       return [...prev, { ...product, quantity: 1 }];
@@ -22,14 +26,14 @@ export const CartProvider = ({ children }) => {
     setIsOpen(true);
   };
 
-  const removeFromCart = (name) => {
-    setItems((prev) => prev.filter((i) => i.name !== name));
+  const removeFromCart = (idKey) => {
+    setItems((prev) => prev.filter((i) => `${i.name}-${i.region}` !== idKey));
   };
 
-  const updateQuantity = (name, quantity) => {
+  const updateQuantity = (idKey, quantity) => {
     if (quantity < 1) return;
     setItems((prev) =>
-      prev.map((i) => (i.name === name ? { ...i, quantity } : i))
+      prev.map((i) => (`${i.name}-${i.region}` === idKey ? { ...i, quantity } : i))
     );
   };
 
@@ -38,7 +42,6 @@ export const CartProvider = ({ children }) => {
   const closeCart = () => setIsOpen(false);
 
   const totalItems = items.reduce((sum, i) => sum + i.quantity, 0);
-  const totalPrice = items.reduce((sum, i) => sum + i.priceValue * i.quantity, 0);
 
   return (
     <CartContext.Provider
@@ -52,7 +55,6 @@ export const CartProvider = ({ children }) => {
         openCart,
         closeCart,
         totalItems,
-        totalPrice,
       }}
     >
       {children}

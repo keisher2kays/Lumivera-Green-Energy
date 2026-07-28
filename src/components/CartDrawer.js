@@ -1,10 +1,11 @@
+
 // src/components/CartDrawer.js
 import React, { useState } from 'react';
 import { X, Plus, Minus, Trash2, CheckCircle2 } from 'lucide-react';
 import { useCart } from '../components/CartContext';
 
 const CartDrawer = () => {
-  const { items, removeFromCart, updateQuantity, clearCart, isOpen, closeCart, totalItems, totalPrice } = useCart();
+  const { items, removeFromCart, updateQuantity, clearCart, isOpen, closeCart, totalItems } = useCart();
   const [view, setView] = useState('cart'); // cart | checkout | success
   const [sending, setSending] = useState(false);
 
@@ -13,9 +14,37 @@ const CartDrawer = () => {
     setView('cart');
   };
 
+  // Helper to get formatted single unit or subtotal string
+  const formatItemPrice = (item, qty = 1) => {
+    const isUK = item.region === 'uk';
+    const currency = isUK ? '£' : 'USD ';
+    const totalVal = (item.priceValue || 0) * qty;
+    return `${currency}${totalVal.toLocaleString()}`;
+  };
+
+  // Group total by currency type in case user added both
+  const calculateTotalsSummary = () => {
+    const totals = items.reduce(
+      (acc, item) => {
+        const isUK = item.region === 'uk';
+        const val = (item.priceValue || 0) * item.quantity;
+        if (isUK) acc.uk += val;
+        else acc.zim += val;
+        return acc;
+      },
+      { zim: 0, uk: 0 }
+    );
+
+    const parts = [];
+    if (totals.zim > 0) parts.push(`USD ${totals.zim.toLocaleString()}`);
+    if (totals.uk > 0) parts.push(`£${totals.uk.toLocaleString()}`);
+
+    return parts.join(' + ');
+  };
+
   const buildOrderSummary = () => {
     return items
-      .map((i) => i.name + '  x' + i.quantity + '  -  USD ' + (i.priceValue * i.quantity))
+      .map((i) => `${i.name} (${i.region === 'uk' ? 'UK' : 'Zim'}) x${i.quantity} - ${formatItemPrice(i, i.quantity)}`)
       .join('\n');
   };
 
@@ -28,7 +57,7 @@ const CartDrawer = () => {
     formData.append('access_key', 'f3e19cf2-449a-4fbb-8145-26b44a0c5cb2');
     formData.append('subject', 'New Product Order — LumiVera Website');
     formData.append('order_summary', buildOrderSummary());
-    formData.append('order_total', 'USD ' + totalPrice);
+    formData.append('order_total', calculateTotalsSummary());
 
     try {
       const res = await fetch('https://api.web3forms.com/submit', {
@@ -70,43 +99,48 @@ const CartDrawer = () => {
           <>
             {items.length === 0 ? (
               <div className="cart-empty-state">
-                <p>Your cart is empty. Browse our products and hit "Request This Item" to add one.</p>
+                <p>Your cart is empty. Browse our products and hit "Initiate Secure Order" to add one.</p>
               </div>
             ) : (
               <>
                 <div className="cart-items-list">
-                  {items.map((item) => (
-                    <div className="cart-item" key={item.name}>
-                      <div className="cart-item-image">
-                        <img src={item.image} alt={item.name} />
-                      </div>
-                      <div className="cart-item-body">
-                        <h5>{item.name}</h5>
-                        <span className="cart-item-spec">{item.spec}</span>
-                        <div className="cart-item-controls">
-                          <button onClick={() => updateQuantity(item.name, item.quantity - 1)}>
-                            <Minus size={14} />
-                          </button>
-                          <span>{item.quantity}</span>
-                          <button onClick={() => updateQuantity(item.name, item.quantity + 1)}>
-                            <Plus size={14} />
+                  {items.map((item) => {
+                    const idKey = `${item.name}-${item.region}`;
+                    return (
+                      <div className="cart-item" key={idKey}>
+                        <div className="cart-item-image">
+                          <img src={item.image} alt={item.name} />
+                        </div>
+                        <div className="cart-item-body">
+                          <h5>{item.name}</h5>
+                          <span className="cart-item-spec">
+                            {item.spec} &bull; {item.region === 'uk' ? '🇬🇧 UK' : '🇿🇼 Zim'}
+                          </span>
+                          <div className="cart-item-controls">
+                            <button onClick={() => updateQuantity(idKey, item.quantity - 1)}>
+                              <Minus size={14} />
+                            </button>
+                            <span>{item.quantity}</span>
+                            <button onClick={() => updateQuantity(idKey, item.quantity + 1)}>
+                              <Plus size={14} />
+                            </button>
+                          </div>
+                        </div>
+                        <div className="cart-item-right">
+                          <span className="cart-item-price">{formatItemPrice(item, item.quantity)}</span>
+                          <button className="cart-item-remove" onClick={() => removeFromCart(idKey)}>
+                            <Trash2 size={15} />
                           </button>
                         </div>
                       </div>
-                      <div className="cart-item-right">
-                        <span className="cart-item-price">USD {item.priceValue * item.quantity}</span>
-                        <button className="cart-item-remove" onClick={() => removeFromCart(item.name)}>
-                          <Trash2 size={15} />
-                        </button>
-                      </div>
-                    </div>
-                  ))}
+                    );
+                  })}
                 </div>
 
                 <div className="cart-drawer-footer">
                   <div className="cart-total-row">
                     <span>Total ({totalItems} item{totalItems !== 1 ? 's' : ''})</span>
-                    <strong>USD {totalPrice}</strong>
+                    <strong>{calculateTotalsSummary()}</strong>
                   </div>
                   <button className="cart-checkout-btn" onClick={() => setView('checkout')}>
                     Proceed to Checkout
@@ -121,15 +155,18 @@ const CartDrawer = () => {
         {view === 'checkout' && (
           <form className="cart-checkout-form" onSubmit={handleCheckout}>
             <div className="cart-order-recap">
-              {items.map((item) => (
-                <div className="cart-order-recap-row" key={item.name}>
-                  <span>{item.name} x{item.quantity}</span>
-                  <span>USD {item.priceValue * item.quantity}</span>
-                </div>
-              ))}
+              {items.map((item) => {
+                const idKey = `${item.name}-${item.region}`;
+                return (
+                  <div className="cart-order-recap-row" key={idKey}>
+                    <span>{item.name} ({item.region === 'uk' ? 'UK' : 'Zim'}) x{item.quantity}</span>
+                    <span>{formatItemPrice(item, item.quantity)}</span>
+                  </div>
+                );
+              })}
               <div className="cart-order-recap-row cart-order-recap-total">
                 <span>Total</span>
-                <span>USD {totalPrice}</span>
+                <span>{calculateTotalsSummary()}</span>
               </div>
             </div>
 
@@ -153,7 +190,7 @@ const CartDrawer = () => {
 
             <div className="form-field">
               <label htmlFor="cart-location">Delivery / Installation Location</label>
-              <input id="cart-location" name="location" type="text" required placeholder="e.g. Borrowdale, Harare" />
+              <input id="cart-location" name="location" type="text" required placeholder="e.g. Borrowdale, Harare / London, UK" />
             </div>
 
             <div className="form-field">
