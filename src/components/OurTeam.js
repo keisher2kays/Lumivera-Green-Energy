@@ -22,7 +22,7 @@ const team = [
   {
     image: ali,
     name: 'Mohammad Bolhasani',
-    role: 'Director',
+    role: 'Director & Shareholder',
     bio: 'Drives business development and strategic growth, connecting LumiVera with new markets and long-term partners.',
   },
 ];
