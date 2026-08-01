@@ -1,63 +1,54 @@
-
-// src/context/CartContext.js
 import React, { createContext, useContext, useState } from 'react';
 
-const CartContext = createContext();
+const CartContext = createContext(null);
 
-export const useCart = () => useContext(CartContext);
+export const useCart = () => {
+  const ctx = useContext(CartContext);
+  if (!ctx) throw new Error('useCart must be inside CartProvider');
+  return ctx;
+};
 
 export const CartProvider = ({ children }) => {
-  const [items, setItems] = useState([]);
-  const [isOpen, setIsOpen] = useState(false);
+  const [cartItems, setCartItems] = useState([]);
+  const [isCartOpen, setIsCartOpen] = useState(false);
 
   const addToCart = (product) => {
-    setItems((prev) => {
-      // Differentiate items by name AND region so UK and Zim items don't collide
-      const existing = prev.find((i) => i.name === product.name && i.region === product.region);
+    const priceValue = product.priceValue || parseInt(String(product.price || '0').replace(/[^0-9]/g,'')) || 0;
+    setCartItems(prev => {
+      const id = product.id || product.name;
+      const existing = prev.find(p => (p.id || p.name) === id);
       if (existing) {
-        return prev.map((i) =>
-          i.name === product.name && i.region === product.region
-            ? { ...i, quantity: i.quantity + 1 }
-            : i
-        );
+        return prev.map(p => (p.id || p.name) === id? {...p, quantity: (p.quantity||1)+1 } : p);
       }
-      return [...prev, { ...product, quantity: 1 }];
+      return [...prev, {...product, priceValue, quantity: 1 }];
     });
-    setIsOpen(true);
   };
 
-  const removeFromCart = (idKey) => {
-    setItems((prev) => prev.filter((i) => `${i.name}-${i.region}` !== idKey));
+  const removeFromCart = (id) => {
+    setCartItems(prev => prev.filter(p => (p.id || p.name)!== id));
   };
 
-  const updateQuantity = (idKey, quantity) => {
-    if (quantity < 1) return;
-    setItems((prev) =>
-      prev.map((i) => (`${i.name}-${i.region}` === idKey ? { ...i, quantity } : i))
-    );
-  };
+  const clearCart = () => setCartItems([]);
 
-  const clearCart = () => setItems([]);
-  const openCart = () => setIsOpen(true);
-  const closeCart = () => setIsOpen(false);
+  const cartCount = cartItems.reduce((a, c) => a + (c.quantity || 1), 0);
 
-  const totalItems = items.reduce((sum, i) => sum + i.quantity, 0);
+  // These 2 names are what your Navbar.js expects
+  const totalItems = cartCount;
+  const openCart = () => setIsCartOpen(true);
+  const closeCart = () => setIsCartOpen(false);
 
   return (
-    <CartContext.Provider
-      value={{
-        items,
-        addToCart,
-        removeFromCart,
-        updateQuantity,
-        clearCart,
-        isOpen,
-        openCart,
-        closeCart,
-        totalItems,
-      }}
-    >
+    <CartContext.Provider value={{
+      cartItems, setCartItems,
+      isCartOpen, setIsCartOpen,
+      isOpen: isCartOpen, setIsOpen: setIsCartOpen,
+      totalItems, cartCount,
+      openCart, closeCart,
+      addToCart, removeFromCart, clearCart
+    }}>
       {children}
     </CartContext.Provider>
   );
 };
+
+export default CartContext;

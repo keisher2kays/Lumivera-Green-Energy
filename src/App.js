@@ -1,6 +1,4 @@
-
-
-// src/App.js
+// Main Website - src/App.js
 import React from 'react';
 import './App.css';
 
@@ -26,21 +24,19 @@ function App() {
     <CartProvider>
       <div className="app-wrapper">
         <Navbar />
-
         <main className="main-content-flow">
           <section id="home"><Hero /></section>
           <section id="about"><AboutUs /></section>
-          <section id='vision'><VisionMission/></section>
+          <section id="vision"><VisionMission /></section>
           <section id="services"><Services /></section>
           <section id="agri-solutions"><AgriSolutions /></section>
-            <section id="Boreholedrilling"><BoreholeDrilling /></section>
+          <section id="Boreholedrilling"><BoreholeDrilling /></section>
           <section id="products"><OurProducts /></section>
           <section id="packages"><Packages /></section>
-           <section id="team"><OurTeam /></section>
+          <section id="team"><OurTeam /></section>
           <section id="TestimonialsPage"><TestimonialsPage /></section>
           <section id="contact"><ContactView /></section>
         </main>
-
         <FooterMarquee />
         <CartDrawer />
         <BackToTop />

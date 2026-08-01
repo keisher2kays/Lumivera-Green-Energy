@@ -48,7 +48,7 @@ const FooterMarquee = () => {
               </li>
               <li>
                 <Mail size={15} strokeWidth={2} />
-                <a href="mailto:info@lumiveragreenenergy.com">info@lumiveragreenenergy.com</a>
+                <a href="mailto:info@lumiveragreenenergy.com">lumivera@lumiveragreenenergy.org</a>
               </li>
               <li>
                 <MapPin size={15} strokeWidth={2} />

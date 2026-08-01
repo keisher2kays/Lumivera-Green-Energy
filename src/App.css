@@ -2782,3 +2782,84 @@ body {
   color: #ffffff;
   box-shadow: 0 2px 8px rgba(0, 112, 243, 0.3);
 }
+.installment-section {
+  background-color: #f8f9fa;
+  border: 1px solid #e9ecef;
+  border-radius: 8px;
+  padding: 14px;
+  margin: 15px 0;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  color: #333;
+}
+
+.checkbox-label input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  accent-color: #10b981; /* Green accent matching solar/store theme */
+}
+
+.installment-fields {
+  margin-top: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.input-group label {
+  font-size: 12px;
+  color: #666;
+  font-weight: 500;
+}
+
+.input-group input {
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.checkout-btn:disabled {
+  background-color: #cbd5e1;
+  cursor: not-allowed;
+}
+
+/* ==========================================
+   Fly-to-Cart Animation
+   Add this file's contents to your global stylesheet
+   (e.g. App.css) or import it directly.
+========================================== */
+
+.fly-to-cart-clone {
+  position: fixed;
+  z-index: 9999;
+  border-radius: 8px;
+  object-fit: cover;
+  pointer-events: none;
+  transition: transform 0.7s cubic-bezier(0.55, 0, 0.85, 0.35), opacity 0.7s ease-in;
+  will-change: transform, opacity;
+}
+
+/* Cart icon bump — triggered briefly when the flying item "lands" */
+.cart-icon-bump {
+  animation: cartBump 0.35s ease;
+}
+
+@keyframes cartBump {
+  0%   { transform: scale(1); }
+  35%  { transform: scale(1.35); }
+  60%  { transform: scale(0.92); }
+  100% { transform: scale(1); }
+}
