@@ -1,5 +1,3 @@
-
-
 // src/components/Packages.js
 import React, { useState, useRef, useEffect } from 'react';
 import { io } from 'socket.io-client';
@@ -64,7 +62,7 @@ const solarTiers = [
     specs: [
       "WHC 6.2kW Hybrid Inverter",
       "48V 100Ah Lithium Battery",
-      "9 x 450W Mono Solar Panels",
+      "6 x 540W Mono Solar Panels",
       "Standard DC/AC Protection Box"
     ]
   },
@@ -455,6 +453,16 @@ const Packages = () => {
       <div className="section-header">
         <h3>Solar Solutions You Can Rely On</h3>
         <p>High-quality engineering packages optimized for household self-sufficiency and longevity.</p>
+        <p
+          style={{
+            fontSize: '0.8rem',
+            color: '#94A3B8',
+            fontStyle: 'italic',
+            marginTop: '0.4rem',
+          }}
+        >
+          Prices reflect equipment cost only — transport and delivery are not included.
+        </p>
       </div>
 
       <div className="region-toggle-wrap">
