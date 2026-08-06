@@ -39,8 +39,8 @@ const solarTiers = [
   {
     name: "Basic Package",
     desc: "Perfect for essential home backup, lights, Wi-Fi, and entertainment",
-    priceZim: "From USD 1,160",
-    priceZimValue: 1160,
+    priceZim: "From USD 1,250",
+    priceZimValue: 1250,
     priceUK: "From £4,500",
     priceUKValue: 4500,
     spec: "3.5kW Kit",
@@ -53,13 +53,13 @@ const solarTiers = [
     ]
   },
   {
-    name: "Essential 6.2kW Package",
+    name: "Essential 6.2kv Package",
     desc: "Entry point into whole-home coverage — lights, fridge, Wi-Fi, and small appliances",
-    priceZim: "From USD 2,150",
-    priceZimValue: 2150,
+    priceZim: "From USD 2,250",
+    priceZimValue: 2250,
     priceUK: "From £9,000",
     priceUKValue: 9000,
-    spec: "6.2kW Kit — Basic",
+    spec: "6.2kv Kit — Basic",
     image: 'https://placehold.co/500x360/123821/F5A623?text=6.2kW+Basic',
     specs: [
       "WHC 6.2kW Hybrid Inverter",
