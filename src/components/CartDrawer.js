@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useCallback } from 'react';
-import { useCart } from './CartContext';
+import { useCart } from '../components/CartContext';
 
 const BACKEND_URL = process.env.REACT_APP_BACKEND_URL || 'http://localhost:5000';
 
@@ -44,9 +44,9 @@ export default function CartDrawer() {
     return `NEW ${type} ORDER\n\nCustomer: ${fullName}\nEmail: ${email}\nPhone: ${phone}\nLocation: ${location}\n\nItems:\n${items}\n\nTotal: ${currency} ${total.toLocaleString()} (${totalCount} items)\nNotes: ${notes || 'None'}`;
   };
 
-  const handleInquiry = async () => {
-    if (!fullName || !email || !phone || !location) return alert('Fill all fields');
-    setLoading(true);
+  // Shared Web3Forms sender so both payment paths (Pay Later / Pay with Card)
+  // send the exact same full-detail notification email to the owner.
+  const sendOrderNotification = async (type) => {
     try {
       await fetch('https://api.web3forms.com/submit', {
         method: 'POST',
@@ -59,9 +59,21 @@ export default function CartDrawer() {
           email: email,
           phone: phone,
           location: location,
-          message: buildMessage('PAY LATER')
+          message: buildMessage(type)
         })
       });
+    } catch (err) {
+      // Don't block the checkout flow if the notification email fails —
+      // just log it so it can be debugged without losing the customer's order.
+      console.error('Order notification failed to send:', err);
+    }
+  };
+
+  const handleInquiry = async () => {
+    if (!fullName || !email || !phone || !location) return alert('Fill all fields');
+    setLoading(true);
+    try {
+      await sendOrderNotification('PAY LATER');
       setOrderSuccess(true);
       clearCart();
     } catch (e) {
@@ -74,6 +86,11 @@ export default function CartDrawer() {
     if (!fullName || !email || !phone || !location) return alert('Fill all fields');
     setLoading(true);
     try {
+      // Send the full-detail notification email before redirecting to Stripe,
+      // so the owner gets an immediate heads-up with name/email/phone/location
+      // rather than relying solely on the Stripe dashboard for card orders.
+      await sendOrderNotification('CARD');
+
       const page = window.location.href.split('?')[0];
       const res = await fetch(`${BACKEND_URL}/api/create-checkout-session`, {
         method: 'POST',
