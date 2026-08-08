@@ -45,9 +45,7 @@ const Hero = () => {
           </h2>
 
           <p className="hero-sub-line animate-reveal-delayed">
-            A UK-based renewable energy company delivering trusted solar solutions
-            to homes, businesses, and communities across Zimbabwe — funded with ease
-            by loved ones abroad.
+           A UK-registered renewable energy and agri-tech company serving the UK and the SADC region with innovative, trusted, and sustainable solar energy and agricultural technology solutions. We work with homes, businesses, industries, farms, and communities to provide reliable energy and smart agricultural solutions that support productivity, sustainability, and long-term growth.
           </p>
 
           <div className="hero-btn-row">
