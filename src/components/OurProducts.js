@@ -34,28 +34,10 @@ import kl4lm from '../assets/lunar.jpg';
 import lunarLite from '../assets/lunarliteclamp.jpg';
 import kl2lm from '../assets/lunarlite.webp';
 
-const WEB3FORMS_KEY = 'f92f666e-d08e-450e-9eb4-112a6eaf6dab';
 const USD_TO_GBP_RATE = 0.78; // Conversion rate for UK pricing
 
 // Base URL for the backend API (stock lookups etc.)
 const API_BASE_URL = process.env.REACT_APP_BACKEND_URL || 'http://localhost:5000';
-
-const sendProductRequestNotification = async (product, formattedPrice) => {
-  try {
-    await fetch('https://api.web3forms.com/submit', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        access_key: WEB3FORMS_KEY,
-        subject: 'New Product Request - LumiVera Website',
-        from_name: 'LumiVera Website',
-        message: `A visitor requested: ${product.name} (${product.spec}) - ${formattedPrice}`,
-      }),
-    });
-  } catch (err) {
-    console.error('Notification failed to send:', err);
-  }
-};
 
 const allProducts = [
   {
@@ -488,6 +470,13 @@ const OurProducts = () => {
     });
   };
 
+  // NOTE: The premature "New Product Request" email has been removed.
+  // Clicking "Request This Item" just adds the product to the cart — no
+  // customer details exist yet at this point, so sending an email here
+  // only ever produced a notification with no name/email/location in it.
+  // The single source of truth for order notifications is now
+  // CartDrawer.js, which fires only once the customer has filled in their
+  // details at checkout.
   const handleRequestItem = (product, event) => {
     // Check stock only at the moment of the request — no visible badge/label beforehand
     if (isOutOfStock(product.name)) {
@@ -506,8 +495,6 @@ const OurProducts = () => {
       region: currentRegion,
       currency: currency,
     });
-
-    sendProductRequestNotification(product, formattedPrice);
 
     // Fire the flying animation from the card that was clicked
     const cardEl = event?.currentTarget?.closest('.product-spec-card');
