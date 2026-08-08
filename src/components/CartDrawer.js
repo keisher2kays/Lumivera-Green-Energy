@@ -52,7 +52,7 @@ export default function CartDrawer() {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          access_key: 'f3e19cf2-449a-4fbb-8145-26b44a0c5cb2',
+          access_key: 'f92f666e-d08e-450e-9eb4-112a6eaf6dab',
           subject: `NEW ORDER: ${fullName} - ${location} - ${currency} ${total}`,
           from_name: 'LumiVera Website',
           name: fullName,
