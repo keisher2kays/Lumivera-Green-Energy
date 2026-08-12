@@ -25,7 +25,7 @@ const FooterMarquee = () => {
 
             <p>
              A forward-looking renewable energy company delivering sustainable, affordable
-    solar solutions for homes, businesses, and communities across Zimbabwe, the
+    solar solutions for homes, businesses, and communities across the SADC region, the
     UK, and beyond.
             </p>
           </div>
