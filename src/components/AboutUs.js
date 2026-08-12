@@ -45,7 +45,7 @@ const AboutUs = () => {
           <div className="about-text-columns animate-slide-blur delay-3">
             <p className="about-col-para">
        
-Lumivera Green Energy is a UK-based company with an expanding presence in the SADC region, delivering sustainable energy and agricultural solutions that empower communities and businesses. We supply high-quality solar panels, lithium batteries, inverters, and pumps alongside innovative agribusiness services that promote food security and sustainable farming.
+LumiVera Green Energy is a UK-based company with an expanding presence in the SADC region, delivering construction, energy, water, and agricultural solutions that empower communities and businesses. We build facilities, supply solar panels and batteries, drill boreholes, and offer agribusiness services promoting food security and sustainable farming.
             </p>
             <p className="about-col-para">
             Bridging international technology with local expertise, we build long-term partnerships across government, commercial, and community sectors. Driven by innovation and quality, our vision is to expand our clean energy and agricultural footprint across Africa, Europe, and Asia to power a greener, more prosperous future.

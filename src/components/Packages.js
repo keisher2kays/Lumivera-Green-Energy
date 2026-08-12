@@ -25,42 +25,42 @@ const solarTiers = [
     priceZimValue: 1250,
     priceUK: "From £4,500",
     priceUKValue: 4500,
-    spec: "3.5kv Kit",
+    spec: "3.5kVA Kit",
     image: solor,
     specs: [
-      "4.5kv Hybrid Inverter",
+      "4.5kVA Hybrid Inverter",
       "24V 100Ah Lithium LifePO4 Battery",
       "4 x 450W Mono Solar Panels",
       "Cabling & Protection Kit"
     ]
   },
   {
-    name: "Essential 6.2kv Package",
+    name: "Essential 6.2kVA Package",
     desc: "Entry point into whole-home coverage — lights, fridge, Wi-Fi, and small appliances",
     priceZim: "From USD 2,250",
     priceZimValue: 2250,
     priceUK: "From £9,000",
     priceUKValue: 9000,
-    spec: "6.2kv Kit — Basic",
+    spec: "6.2kVA Kit — Basic",
     image: 'https://placehold.co/500x360/123821/F5A623?text=6.2kW+Basic',
     specs: [
-      "WHC 6.2kv Hybrid Inverter",
+      "WHC 6.2kVA Hybrid Inverter",
       "48V 100Ah Lithium Battery",
       "6 x 540W Mono Solar Panels",
       "Standard DC/AC Protection Box"
     ]
   },
   {
-    name: "Standard 6.2kv Package",
+    name: "Standard 6.2kVA Package",
     desc: "Ideal for medium households managing regular load-shedding cycles",
     priceZim: "From USD 3,350",
     priceZimValue: 3350,
     priceUK: "From £14,000",
     priceUKValue: 14000,
-    spec: "6.2kW Kit — Standard",
+    spec: "6.2kVA Kit — Standard",
     image: 'https://placehold.co/500x360/123821/F5A623?text=6.2kW+Standard',
     specs: [
-      "WHC 6.2kv Hybrid Inverter",
+      "WHC 6.2kVA Hybrid Inverter",
       "48V 200Ah Lithium Battery",
       "9 x 590W Mono Solar Panels",
       "Full DC/AC Protection Box & Accessories"
@@ -68,32 +68,32 @@ const solarTiers = [
     featured: true
   },
   {
-    name: "Power 11kv Package",
+    name: "Power 11kVA Package",
     desc: "Entry tier for heavy residential estates and small commercial self-sufficiency",
     priceZim: "From USD 4,300",
     priceZimValue: 4300,
     priceUK: "From £17,500",
     priceUKValue: 17500,
-    spec: "11kW Kit — Basic",
+    spec: "11kVA Kit — Basic",
     image: 'https://placehold.co/500x360/123821/F5A623?text=11kW+Basic',
     specs: [
-      "11kv Hybrid Inverter",
+      "11kVA Hybrid Inverter",
       "10.2kWh Lithium LifePO4 Battery",
       "12 x 450W Mono Solar Panels",
       "Standard Protection Kit & Cables"
     ]
   },
   {
-    name: "Premium 11kv Package",
+    name: "Premium 11kVA Package",
     desc: "Our flagship tier — for heavy residential estates, boreholes, and full commercial self-sufficiency",
     priceZim: "From USD 6,450",
     priceZimValue: 6450,
     priceUK: "From £24,500",
     priceUKValue: 24500,
-    spec: "11kv Kit — Flagship",
+    spec: "11kVA Kit — Flagship",
     image: 'https://placehold.co/500x360/123821/F5A623?text=Premium+Package',
     specs: [
-      "11kv Flagship Hybrid Inverter",
+      "11kVA Flagship Hybrid Inverter",
       "15.3kWh Lithium LifePO4 Battery",
       "12 x 590W Mono Solar Panels",
       "Heavy Duty Protection Kit & Cables"

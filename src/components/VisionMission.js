@@ -51,7 +51,7 @@ const VisionMission = () => {
             <p>
               To provide affordable, efficient, and environmentally friendly
               energy solutions through innovation, technical excellence, and
-              customer-focused service — while contributing to global efforts
+              customer-focused service while contributing to global efforts
               toward reducing carbon emissions and promoting sustainable
               development.
             </p>

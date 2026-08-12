@@ -71,7 +71,7 @@ const BoreholeDrilling = () => {
           <div className="why-content-panel">
             <h3>Why Choose LumiVera Hydro?</h3>
             <p>
-              Our clients benefit from professional hydrogeological engineering, heavy-duty pneumatic rotary drilling equipment, and reliable solar-integrated pumping systems — backed by guaranteed casing standards, transparent site testing, and long-term partnerships built on trust.
+              Our clients benefit from professional hydrogeological engineering, heavy-duty pneumatic rotary drilling equipment, and reliable solar-integrated pumping systems backed by guaranteed casing standards, transparent site testing, and long-term partnerships built on trust.
             </p>
 
             <div className="checklist-grid">

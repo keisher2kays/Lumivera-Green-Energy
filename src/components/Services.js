@@ -11,7 +11,7 @@ import {
   Zap 
 } from 'lucide-react';
 import robot from '../assets/robot.png';
-import avondale from '../assets/avondale.jpg';
+import masvingoHospital from '../assets/hospital.jpeg';
 import goromonzi from '../assets/goromonzi.jpg';
 import uk from '../assets/uk.jpg';
 import bulawayoInstall from '../assets/welding.jpeg';
@@ -75,7 +75,7 @@ const Services = () => {
   <h3>Why Choose LumiVera?</h3>
   <p>
     Our clients benefit from professional project management, high-quality
-    renewable energy solutions, and an international business outlook — backed
+    renewable energy solutions, and an international business outlook backed
     by innovative engineering, competitive pricing, and long-term partnerships
     built on trust and excellence.
   </p>
@@ -175,18 +175,16 @@ const Services = () => {
               </div>
             </div>
 
-            <div className="project-showcase-card">
+           <div className="project-showcase-card">
               <div className="project-card-image-wrapper">
-                {/* <img src="https://images.unsplash.com/photo-1548549117-73d758f278d6?w=800" alt="Avondale Retail Complex" /> */}
-                <img src= {avondale} alt="Avondale Retail Complex" />
+                <img src={masvingoHospital} alt="Masvingo Hospital Construction" />
               </div>
               <div className="project-card-meta-content">
-                <div className="project-location-badge">Avondale, Harare</div>
-                <h5>5kVA Commercial Solar Hub</h5>
-                <p>Engineered to protect a multi-office business center from utility grid load-shedding. Features automated smart transfer infrastructure to keep critical servers online instantly.</p>
+                <div className="project-location-badge">Masvingo</div>
+                <h5>Masvingo Hospital Facility Construction</h5>
+                <p>Full structural construction and finishing for a hospital facility in Masvingo, delivered to institutional building standards from foundations and roofing through to tiling and final fit-out.</p>
               </div>
             </div>
-
         
 
             <div className="project-showcase-card">

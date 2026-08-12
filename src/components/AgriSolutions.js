@@ -51,7 +51,7 @@ const AgriSolutions = () => {
             <h4>Agricultural Drone Services</h4>
             <p>
               Automated smart farming technology for precision spraying, crop
-              health monitoring, and field mapping — reducing input costs while
+              health monitoring, and field mapping reducing input costs while
               improving yield across every acre.
             </p>
             <div className="agri-tag-row">

@@ -45,7 +45,7 @@ const Hero = () => {
           </h2>
 
           <p className="hero-sub-line animate-reveal-delayed">
-           A UK-registered renewable energy and agri-tech company serving the UK and the SADC region with innovative, trusted, and sustainable solar energy and agricultural technology solutions. We work with homes, businesses, industries, farms, and communities to provide reliable energy and smart agricultural solutions that support productivity, sustainability, and long-term growth.
+         A UK-registered construction, renewable energy, and agri-tech company serving the UK and the SADC region with trusted, end-to-end solutions in construction, solar energy, borehole drilling, and agricultural technology. We build the structures you live and work in, power them with reliable clean energy, and secure the water that keeps them running all delivered by one team, under one roof. 
           </p>
 
           <div className="hero-btn-row">

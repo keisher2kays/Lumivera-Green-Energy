@@ -67,7 +67,7 @@ const ConstructionProjects = () => {
             <h3>Why Choose LumiVera Construction?</h3>
             <p>
               Our clients benefit from a single, coordinated team handling both the civil build and the
-              energy system — backed by certified site supervision, transparent timelines, and long-term
+              energy system backed by certified site supervision, transparent timelines, and long-term
               partnerships built on trust.
             </p>
 
