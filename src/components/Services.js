@@ -170,7 +170,7 @@ const Services = () => {
               </div>
               <div className="project-card-meta-content">
                 <div className="project-location-badge">Bulawayo</div>
-                <h5>5kVA Residential Solar Installation</h5>
+                <h5>6kVA Residential Solar Installation</h5>
                 <p>A full rooftop solar conversion for a residential property in Bulawayo, combining rooftop and ground-mounted panel arrays with a 5kVA hybrid system for dependable day-to-day power and load-shedding backup.</p>
               </div>
             </div>

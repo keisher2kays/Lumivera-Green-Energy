@@ -18,6 +18,7 @@ import { CartProvider } from './components/CartContext';
 import AgriSolutions from './components/AgriSolutions';
 import BackToTop from './components/BackToTop';
 import BoreholeDrilling from './components/BoreholeDrilling';
+import ConstructionProjects from './components/Constructionprojects';
 
 function App() {
   return (
@@ -31,6 +32,7 @@ function App() {
           <section id="services"><Services /></section>
           <section id="agri-solutions"><AgriSolutions /></section>
           <section id="Boreholedrilling"><BoreholeDrilling /></section>
+          <section id="Constructionprojects"><ConstructionProjects /></section>
           <section id="products"><OurProducts /></section>
           <section id="packages"><Packages /></section>
           <section id="team"><OurTeam /></section>
