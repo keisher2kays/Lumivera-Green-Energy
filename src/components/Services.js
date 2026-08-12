@@ -14,6 +14,7 @@ import robot from '../assets/robot.png';
 import avondale from '../assets/avondale.jpg';
 import goromonzi from '../assets/goromonzi.jpg';
 import uk from '../assets/uk.jpg';
+import bulawayoInstall from '../assets/welding.jpeg';
 
 const Services = () => {
   return (
@@ -163,14 +164,14 @@ const Services = () => {
 
 
 
-            <div className="project-showcase-card">
+           <div className="project-showcase-card">
               <div className="project-card-image-wrapper">
-                <img src="https://images.unsplash.com/photo-1613665813446-82a78c468a1d?w=800" alt="Borrowdale Estate Project" />
+                <img src={bulawayoInstall} alt="Bulawayo Estate Project" />
               </div>
               <div className="project-card-meta-content">
-                <div className="project-location-badge">Borrowdale, Harare</div>
-                <h5>10kVA Full Estate Independence</h5>
-                <p>A comprehensive off-grid conversion for a premium residential estate. Sourced completely through our UK office and fitted with dual lithium backup blocks to guarantee uninterrupted clean power.</p>
+                <div className="project-location-badge">Bulawayo</div>
+                <h5>5kVA Residential Solar Installation</h5>
+                <p>A full rooftop solar conversion for a residential property in Bulawayo, combining rooftop and ground-mounted panel arrays with a 5kVA hybrid system for dependable day-to-day power and load-shedding backup.</p>
               </div>
             </div>
 
