@@ -1,7 +1,7 @@
 // src/components/AgriSolutions.js
 import React from 'react';
 import { Sprout, Plane, Thermometer, Droplets, ScanEye, SprayCan } from 'lucide-react';
-import greenhouseImg from '../assets/greenhouse.jpg';
+import greenhouse from '../assets/greenhouse.jpg';
 import droneImg from '../assets/drone.jpg';
 
 const AgriSolutions = () => {
@@ -20,7 +20,7 @@ const AgriSolutions = () => {
         {/* ROW 2: GREENHOUSE FEATURE */}
         <div className="agri-feature-split animate-slide-blur delay-1">
           <div className="agri-feature-image">
-            <img src={greenhouseImg} alt="Solarized greenhouse structure" />
+            <img src={greenhouse} alt="Solarized greenhouse structure" />
           </div>
           <div className="agri-feature-content">
             <div className="agri-feature-icon">

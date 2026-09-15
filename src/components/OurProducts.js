@@ -470,13 +470,6 @@ const OurProducts = () => {
     });
   };
 
-  // NOTE: The premature "New Product Request" email has been removed.
-  // Clicking "Request This Item" just adds the product to the cart — no
-  // customer details exist yet at this point, so sending an email here
-  // only ever produced a notification with no name/email/location in it.
-  // The single source of truth for order notifications is now
-  // CartDrawer.js, which fires only once the customer has filled in their
-  // details at checkout.
   const handleRequestItem = (product, event) => {
     // Check stock only at the moment of the request — no visible badge/label beforehand
     if (isOutOfStock(product.name)) {
