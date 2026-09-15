@@ -3,16 +3,13 @@ import React from 'react';
 import { Eye, Target } from 'lucide-react';
 
 const coreValues = [
-  'Sustainability',
   'Integrity',
   'Innovation',
   'Excellence',
-  'Accountability',
-  'Environmental Stewardship',
-  'Customer Satisfaction',
-  'Safety',
+  'Reliability',
+  'Sustainability',
+  'Customer Focus',
   'Partnership',
-  'Continuous Improvement',
 ];
 
 const VisionMission = () => {
@@ -36,10 +33,10 @@ const VisionMission = () => {
             </div>
             <h4>Vision</h4>
             <p>
-              To become a globally recognized leader in renewable energy by
-              delivering innovative, sustainable, and reliable solar energy
-              solutions that empower communities and protect the environment
-              for future generations.
+              To become Africa's leading provider of sustainable energy,
+              agricultural technology, and construction solutions that
+              improve and transform lives through innovation, reliability,
+              and environmental stewardship.
             </p>
           </div>
 
@@ -49,18 +46,17 @@ const VisionMission = () => {
             </div>
             <h4>Mission</h4>
             <p>
-              To provide affordable, efficient, and environmentally friendly
-              energy solutions through innovation, technical excellence, and
-              customer-focused service while contributing to global efforts
-              toward reducing carbon emissions and promoting sustainable
-              development.
+              To deliver world-class renewable energy systems, smart
+              agricultural technologies, and sustainable infrastructure
+              that improves productivity, reduces energy costs, and
+              supports economic development across Africa.
             </p>
           </div>
         </div>
 
         {/* ROW 3: CORE VALUES */}
         <div className="vision-values-row animate-slide-blur delay-3">
-          <span className="vision-values-label">Core Values</span>
+          <span className="vision-values-label">Core Values &mdash; Strongly Rooted in Ubuntu</span>
           <div className="vision-values-pills">
             {coreValues.map((value) => (
               <span className="vision-value-pill" key={value}>{value}</span>

@@ -11,7 +11,7 @@ const AgriSolutions = () => {
 
         {/* ROW 1: TAGGED ZONE — matches About / Services / Products */}
         <div className="agri-tagged-row">
-          <div className="agri-meta-tag animate-mask">Greenhouses &amp; Agri-Tech</div>
+          <div className="agri-meta-tag animate-mask">Agro-tech</div>
           <h3 className="agri-bold-statement animate-slide-blur">
             Innovation in greenhouses and smart farming equipment.
           </h3>

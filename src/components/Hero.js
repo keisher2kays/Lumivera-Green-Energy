@@ -41,7 +41,7 @@ const Hero = () => {
           </div>
 
           <h2>
-            POWERING A <span className="neon-highlight">SUSTAINABLE</span> FUTURE.
+            FOR A <span className="neon-highlight">BETTER</span> TOMORROW.
           </h2>
 
           <p className="hero-sub-line animate-reveal-delayed">
