@@ -29,7 +29,7 @@ const AgriSolutions = () => {
             <h4>Solarized Greenhouses</h4>
             <p>
               Solar-powered greenhouse structures engineered for optimal climate
-              control, extended growing seasons, and lower operating costs —
+              control, extended growing seasons, and lower operating costs 
               built to support commercial and small-holder growers alike.
             </p>
             <div className="agri-tag-row">

@@ -37,7 +37,7 @@ const VisionMission = () => {
             <h4>Vision</h4>
             <p>
               To become a globally recognized leader in renewable energy by
-              delivering innovative, sustainable, and reliable green energy
+              delivering innovative, sustainable, and reliable solar energy
               solutions that empower communities and protect the environment
               for future generations.
             </p>

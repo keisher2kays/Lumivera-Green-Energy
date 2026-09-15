@@ -18,7 +18,7 @@ const FooterMarquee = () => {
             <div className="footer-brand-logo-group">
               <img
                 src={logoImg}
-                alt="Lumivera Green Energy"
+                alt="LumiVera Systems"
                 className="footer-logo-img"
               />
             </div>
@@ -71,7 +71,7 @@ const FooterMarquee = () => {
       </div>
 
       <div className="footer-bottom-bar">
-        <span>© {new Date().getFullYear()} LumiVera Green Energy. All rights reserved.</span>
+        <span>© {new Date().getFullYear()} LumiVera Systems. All rights reserved.</span>
       </div>
 
     </footer>

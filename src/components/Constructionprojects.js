@@ -32,7 +32,7 @@ const ConstructionProjects = () => {
                 </div>
                 <div>
                   <h4>Residential & Commercial Construction</h4>
-                  <p>Foundations, structural, and civil works for homes, businesses, and industrial sites — built to code and built to last.</p>
+                  <p>Foundations, structural, and civil works for homes, businesses, and industrial sites  built to code and built to last.</p>
                 </div>
               </div>
 
